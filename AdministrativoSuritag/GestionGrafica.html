@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Title Page-->
+    <title>Gestion Grafica</title>
+
+    <meta name="theme-color" content="#34495E">
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link  rel="stylesheet" href="vendor/SyncFusion/default-theme/ej.web.all.min.css" >
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  
+    <!-- Main CSS-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <script src="js/config.js" ></script>
+
+ 
+<style>
+
+.table-mesa-space{
+width: 10px !important;
+height: 80px !important;
+align-content: center;
+text-align: center;
+/*
+background: rgb(78, 7, 78);*/
+background-color: #F4F6F6;
+}
+
+.item-list{
+   margin-bottom: 5px;
+   
+  
+}
+
+.panelLeft{
+  width: 100%;
+  height: 500px;
+ 
+  border-radius: 5px;
+ 
+ border-style: solid;
+ 
+}
+
+.foother-Nav{
+    width: 100%;
+    height: 50px;
+    background: black;
+    border-radius: 5px;
+}
+.headerPanel{
+  width: 100%;
+  /*background:#5D6D7E;*/
+  background-color: transparent;
+  display: inline-block; 
+  margin-top: 10px;
+
+  /*
+  padding-left: 25%;
+  padding-top: 5px;
+  */
+  padding:15px;
+
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  
+}
+
+ .fecha_{
+    color: #2C3E50;
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: block;
+    margin: auto;
+    
+
+    text-align: center;
+ }
+
+
+.top-panel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%; /* 300px*/
+    height: 50px;
+    background: transparent;
+   
+}
+
+.itemSelected{
+    background:gray;
+}
+
+.card-item {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2px;
+}
+
+button:focus,
+input:focus,
+textarea:focus 
+a:focus {
+    outline: none !important;
+}
+
+body, button, input, textarea{
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important; 
+    font-size: 14px;
+    line-height: 18px;
+    transition: all .2s ease-in-out;
+
+}
+.logo_ad{
+    width: 180px;
+    height: auto;
+}
+.nav_style{
+   background-color: #34495E !important; 
+    color: #fff;
+}
+
+</style>
+
+</head>
+
+<body style="background: #D6DBDF"  class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block nav_style">
+            <style type="text/css">
+                .list-unstyled li a:hover{
+                    transition: 0.3s all ease;
+                    color: #fff !important;
+                    font-size: 1.1rem;
+                }
+            </style>
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="images/icon/suritag_admin.svg" alt="logo" class="logo_ad" />
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="ListaSitios.html">
+                                    <i class="fas fa-home"></i>Lista de Sitios
+                                    
+                                </a>
+                              
+                            </li>
+                            <li>
+                                <a href="Resrvas.html">
+                                    <i class="far fa-calendar-alt"></i>
+                                    Calendario de Reservas</a>
+                            </li>
+                            <li>
+                                <a href="Menu.html">
+                                    <i class="fas fa-coffee"></i>
+                                    Menu Diario</a>
+                            </li>
+                            <li>
+                                <a href="Ofertas.html">
+                                    <i class="fas fa-percent"></i>
+                                    Ofertas</a>
+                               
+                            </li>
+                         
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-button-item js-item-menu">
+                            <i class="zmdi zmdi-settings"></i>
+                            <div class="setting-dropdown js-dropdown">
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-account"></i>Account</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-settings"></i>Setting</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-globe"></i>Language</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-pin"></i>Location</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-email"></i>Email</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#">john doe</a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#">john doe</a>
+                                            </h5>
+                                            <span class="email">johndoe@example.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+                <div class="header-button-item has-noti js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                        <div class="notifi__title">
+                            <p>You have 3 Notifications</p>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c1 img-cir img-40">
+                                <i class="zmdi zmdi-email-open"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a email notification</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c2 img-cir img-40">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </div>
+                            <div class="content">
+                                <p>Your account has been blocked</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c3 img-cir img-40">
+                                <i class="zmdi zmdi-file-text"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a new file</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__footer">
+                            <a href="#">All notifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-button-item js-item-menu">
+                    <i class="zmdi zmdi-settings"></i>
+                    <div class="setting-dropdown js-dropdown">
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-account"></i>Account</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                            </div>
+                        </div>
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-globe"></i>Language</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-pin"></i>Location</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-email"></i>Email</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="container-fluid">
+       
+<div class="row" >
+    <div class="col-12 col-sm-12 col-md-12">
+
+        <div class="headerPanel">
+
+        <!--<div  style="margin-left: 20%" >-->
+
+
+           <div class="date ">
+                <h3 class="fecha_">Viernes, Ago 30</h3>
+           </div> 
+
+
+        <!--</div>-->
+
+        </div>
+
+    </div>
+
+<div class="col-4 col-sm-4 col-md-4" >
+
+        <div class="panelLeft">
+  <div class="card shadows-sm">
+<div class="card-header">
+<h3 style="font-weight: 600; color: #2C3E50;">Reservas</h3>
+</div>
+<div class="card-body" style="height:350px !important;overflow: scroll;overflow-x: hidden" >
+
+    <ul class="list-group" id="itemContainer" >
+    <!--    <li class="list-group-item card-item" data-toggle="tooltip" data-placement="right" title="Click para ver mas Info"   >
+           <h4>Nombre del Usuario </h4>
+           <label style="color: black !important;width: 100%"  > <b>Cantidad de personas:</b> 4</label> 
+        <label class="badge badge-danger" style="color: black !important" ><b>Item:</b> Mesa 1</label>
+        </li>  -->
+       
+      </ul>
+
+
+
+</div>
+<div class="card-footer">
+
+        <div class="row">
+
+                <div  value='10' id="itemReservas"  class="itemPanel  col-4 col-sm-4 col-md-4">
+                  <center>
+                        <img src="images/icon/booking.png" >   
+                    <h6>Reservas</h6>
+                  </center>
+                   
+                </div>
+                <div id="itemCheckIn"  class="itemPanel col-4 col-sm-4 col-md-4">
+                      <center>
+                            <img src="images/icon/check-in.png" >
+                        <h6>On Check-in</h6>
+                      </center>
+                
+                    </div>
+                    <div id="itemPedidos" class="itemPanel col-4 col-sm-4 col-md-4">
+                       <center>
+                            <img src="images/icon/pedidos.png" >
+                            <h6>Pedidos</h6>
+                       </center>
+                      
+                      </div>   
+                
+                
+                </div>
+
+
+</div>
+
+
+  </div>
+
+
+            </div>
+     
+
+
+
+
+    </div>
+
+   <div class="col-8 col-sm-8 col-md-8">
+
+        <table class="table table-bordered" >
+
+                <tbody>
+                       <tr>
+                           <th class="table-mesa-space " id="tableA1" > </th>
+                           <th class="table-mesa-space" id="tableA2" ></th>
+                           <th class="table-mesa-space" id="tableA3"></th>
+                           <th class="table-mesa-space" id="tableA4" ></th>
+                           <th class="table-mesa-space" id="tableA5" ></th>
+                           <th class="table-mesa-space" id="tableA6" ></th>
+                           <th class="table-mesa-space" id="tableA7" ></th>
+                           <th class="table-mesa-space" id="tableA8" ></th>
+                           <th class="table-mesa-space" id="tableA9" ></th>
+                           <th class="table-mesa-space" id="tableA10" ></th>
+                          
+                       </tr>  
+                       <tr>
+                            <th class="table-mesa-space" id="tableB1" ></th>
+                            <th class="table-mesa-space" id="tableB2" ></th>
+                            <th class="table-mesa-space" id="tableB3" ></th>
+                            <th class="table-mesa-space" id="tableB4" >
+                    <!--  <img  src="images/table64.png"  width="120"  height="120" style="position: absolute">
+-->
+
+                            </th>
+                            <th class="table-mesa-space" id="tableB5" ></th>
+                            <th class="table-mesa-space" id="tableB6" ></th>
+                            <th class="table-mesa-space" id="tableB7" ></th>
+                            <th class="table-mesa-space" id="tableB8" ></th>
+                            <th class="table-mesa-space" id="tableB9" ></th>
+                            <th class="table-mesa-space" id="tableB10" ></th>
+                           
+                        </tr>    
+                        <tr>
+                                <th class="table-mesa-space" id="tableC1"></th>
+                                <th class="table-mesa-space" id="tableC2"></th>
+                                <th class="table-mesa-space" id="tableC3"></th>
+                                <th class="table-mesa-space" id="tableC4"></th>
+                                <th class="table-mesa-space" id="tableC5"></th>
+                                <th class="table-mesa-space" id="tableC6"></th>
+                                <th class="table-mesa-space" id="tableC7"></th>
+                                <th class="table-mesa-space" id="tableC8"></th>
+                                <th class="table-mesa-space" id="tableC9"></th>
+                                <th class="table-mesa-space" id="tableC10"></th>
+                                
+                            </tr>    
+                            <tr>
+                                    <th class="table-mesa-space" id="tableD1" ></th>
+                                    <th class="table-mesa-space" id="tableD2" ></th>
+                                    <th class="table-mesa-space" id="tableD3" ></th>
+                                    <th class="table-mesa-space" id="tableD4" ></th>
+                                    <th class="table-mesa-space" id="tableD5" ></th>
+                                    <th class="table-mesa-space" id="tableD6"></th>
+                                    <th class="table-mesa-space" id="tableD7"></th>
+                                    <th class="table-mesa-space" id="tableD8"></th>
+                                    <th class="table-mesa-space" id="tableD9"></th>
+                                    <th class="table-mesa-space" id="tableD10"></th>
+                                    
+                                   
+                                </tr> 
+                                <tr>
+                                        <th class="table-mesa-space" id="tableE1" ></th>
+                                        <th class="table-mesa-space" id="tableE2" ></th>
+                                        <th class="table-mesa-space" id="tableE3" ></th>
+                                        <th class="table-mesa-space" id="tableE4" ></th>
+                                        <th class="table-mesa-space" id="tableE5" ></th>
+                                        <th class="table-mesa-space" id="tableE6"></th>
+                                        <th class="table-mesa-space" id="tableE7"></th>
+                                        <th class="table-mesa-space" id="tableE8"></th>
+                                        <th class="table-mesa-space" id="tableE9"></th>
+                                        <th class="table-mesa-space" id="tableE10"></th>
+                                       
+                                    </tr> 
+                                    
+                                    <tr>
+                                            <th class="table-mesa-space" id="tableF1" ></th>
+                                            <th class="table-mesa-space" id="tableF2" ></th>
+                                            <th class="table-mesa-space" id="tableF3" ></th>
+                                            <th class="table-mesa-space" id="tableF4" ></th>
+                                            <th class="table-mesa-space" id="tableF5" ></th>
+                                            <th class="table-mesa-space" id="tableF6"></th>
+                                            <th class="table-mesa-space" id="tableF7"></th>
+                                            <th class="table-mesa-space" id="tableF8"></th>
+                                            <th class="table-mesa-space" id="tableF9"></th>
+                                            <th class="table-mesa-space" id="tableF10"></th>
+                                           
+                                        </tr> 
+                                        <tr>
+                                                <th class="table-mesa-space" id="tableG1" ></th>
+                                                <th class="table-mesa-space" id="tableG2" ></th>
+                                                <th class="table-mesa-space" id="tableG3" ></th>
+                                                <th class="table-mesa-space" id="tableG4" ></th>
+                                                <th class="table-mesa-space" id="tableG5" ></th>
+                                                <th class="table-mesa-space" id="tableG7"></th>
+                                                <th class="table-mesa-space" id="tableG7"></th>
+                                                <th class="table-mesa-space" id="tableG8"></th>
+                                                <th class="table-mesa-space" id="tableG9"></th>
+                                                <th class="table-mesa-space" id="tableG10"></th>
+                                              
+                                               
+                                            </tr>   
+                                            <tr>
+                                                <th class="table-mesa-space" id="tableH1" ></th>
+                                                <th class="table-mesa-space" id="tableH2" ></th>
+                                                <th class="table-mesa-space" id="tableH3" ></th>
+                                                <th class="table-mesa-space" id="tableH4" ></th>
+                                                <th class="table-mesa-space" id="tableH5" ></th>
+                                                <th class="table-mesa-space" id="tableH6" ></th>
+                                                <th class="table-mesa-space" id="tableH7" ></th>
+                                                <th class="table-mesa-space" id="tableH8" ></th>
+                                                <th class="table-mesa-space" id="tableH9" ></th>
+                                                <th class="table-mesa-space" id="tableH10" ></th>
+                                               
+                                            </tr>        
+                </tbody>
+
+            </table>
+
+            <div class="top-panel shadows">
+                <div class="contenedor_top_panel ">
+                    <select id="listaPisos" class="form-control-sm" >
+                       
+                    </select>
+                    <button class="btn btn-sm btn-danger" id="btnReservaNueva" >Nueva Reserva</button>
+                </div>
+                <style type="text/css">
+                    .contenedor_top_panel{
+                        padding: 5px;
+                        background-color: #fff;
+                        /*float: right;*/
+                        display: block;
+                        text-align: right;
+                        border-top: 2px solid #D5D8DC;
+                    }
+                </style>
+            </div>
+
+
+   </div> 
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/moment.js" >  </script>
+   
+    <!-- Bootstrap JS-->
+
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+
+  
+  <!--  <script src="vendor/SyncFusion/jsrender.min.js"></script>
+    <script src="vendor/SyncFusion/ej.web.all.min.js"></script>  -->
+ 
+
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+
+
+    
+
+    <script type="text/javascript">
+
+       var Sitio = getParameterByName("idSitio");
+       var fecha = getParameterByName("fecha"); 
+       var db = firebase.database();
+
+        $(function () {
+ConsultarPisosPorSitio();            
+
+ReservasTodas();
+$("#listaPisos").change(function (rvt) {
+  
+if($(this).val() == "-1"){
+
+}else{
+    CargarConfigMesas( $(this).val() );
+}
+
+
+});
+
+
+        });
+
+
+
+
+
+
+
+function ConsultarPisosPorSitio() {
+
+        $.ajax({
+          type: "post",
+          url: "https://suritag.com/WebServiceSuritag/public/ListaPisos",
+          data: {idSitio:Sitio},
+          dataType: "json"
+      }).done(function (data) {
+          mesas = data.value;
+
+          if(data.value == [] || data.value.length == 0){
+  alert("Plantas no Disponibles");
+          } else{
+            $("#listaPisos").empty();
+           
+          
+             
+             $("#listaPisos").append( "<option value='-1' >Seleccione</option>  " );
+
+
+              data.value.forEach(element => {
+                $("#listaPisos").append("<option value='"+element.idPiso+"' >"+element.Nombre+"</option>");  
+
+              });
+
+          }
+       
+
+       }).fail(function (error) { 
+
+       }).always(function () { 
+
+       });
+    
+}
+
+
+function CargarConfigMesas(idPlantel) {
+   $(".table-mesa-space").empty();
+
+    db.ref("Sitios/"+Sitio+"/Config/Plantel/"+idPlantel+"/Grafic").on("child_added",function (snapshot) {
+   
+        var json =  snapshot.val();
+  if(json != null){
+
+
+ 
+
+switch (json.TIPOOBJETO) {
+    case "mesaredonda":
+
+    $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/coffee-table.png"  width="52" height="52" >`);
+        
+        break;
+
+        case "mesacuadrada":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/table.png"  width="52" height="52" > `);
+       
+        
+        break;
+
+        case "pared":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/brickwall.png"  width="52" height="52"  >`);
+        
+        break;
+
+        case "puerta":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/doors.png"  width="52" height="52"  >`);
+      
+        
+        break;
+        case "recepcion":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/reception.png"  width="52" height="52"  >`);
+      
+        break;
+
+    default:
+        break;
+}
+
+
+  }
+
+
+
+        
+    });
+
+
+}
+
+$(".itemPanel").click(function (evt) { 
+
+$(".itemPanel").removeClass("itemSelected");
+$(this).addClass("itemSelected");
+
+$(this).attr("id");
+
+
+
+ });
+
+
+
+
+function ReservasTodas(){
+
+
+$.ajax({
+    type: "get",
+    url: "https://suritag.com/WebServiceSuritag/public/GetAllRservasSitio",
+    data: {
+        idSitio :Sitio,
+        Current: fecha
+      },
+    dataType: "json",
+  
+}).done(function (data) { 
+  
+    if(data.value == 0){
+alert("No hay  Reservas disponibles");
+    }else{
+
+data.value.forEach(element => {
+  
+  var content = ` <li class="list-group-item card-item" data-toggle="tooltip" data-placement="right" title="Click para ver mas Info"   >
+           <h4>`+element.NombreUsuario+`</h4>
+           <label style="color: black !important;width: 100%"  > <b>Cantidad de personas:</b>`+element.CantidadPersonas+`</label> 
+        <label class="badge badge-danger" style="color: black !important" ><b>Item:</b>`+element.NombreMesa+`</label>
+        </li>`;
+  
+        $("#itemContainer").append(content);
+
+});
+
+
+
+
+    }
+
+
+ }).fail(function(error){
+     alert("Error al consultar las reservas");
+
+});
+
+
+}
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->

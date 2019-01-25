@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=euc-jp">-->
+    <!-- Required meta tags-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Login</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <style type="text/css">
+        .fondo_login{
+            background-image: url("https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") !important;
+            background-position: center;
+            background-size: cover;
+           
+            /*
+            animation-name: galeria;
+            animation-duration: 1s;
+            
+            animation-iteration-count: infinite;*/
+
+        }
+        .ret{
+            background-color: rgba(0,0,0,0.2);
+            display: block;
+        }
+        .contenedor_global{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            
+        }
+        label{
+            color: #2C3E50 !important;
+        }
+    </style>
+</head>
+
+<body class="animsition fondo_login">
+   
+        <div class="container ret">
+    <div class="page-wrapper ret contenedor_global">
+        <div class="page-content--bge5 ret">
+            <div class="container ret">
+
+                <div class="col-auto-4">
+                     <div class="login-wrap">
+
+                    <div class="login-content shadow rounded">
+                        <div class="login-logo">
+                            <a href="#">
+                                <img src="images/icon/logo.png" alt="CoolAdmin">
+                            </a>
+                        </div>
+                        <div class="login-form">
+                            <form action="" method="post">
+                                <div class="form-group">
+                                    <label>Correo electrónico:</label>
+                                    <input class="au-input au-input--full" id="usuario"  type="text" name="email" placeholder="Usuario">
+                                       <p id="holderusuario"  style="color: red" >Usuario no valido</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Contraseña:</label>
+                                    <input class="au-input au-input--full" type="password" id="password" name="password" placeholder="clave de acceso">
+                                    <p id="holderPassword"  style="color: red" >Contraseña no valida</p>
+                         
+                                </div>
+                                <div class="login-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember">Recordarme
+                                    </label>
+                                    <label>
+                                        <a href="#">Olvido su contraseña?</a>
+                                    </label>
+                                </div>
+                                <button class="au-btn au-btn--block au-btn--green m-b-20" id="Ingresar" type="submit"> <i id="loadingBtnIn" class="fas fa-sync fa-spin"></i>  Ingresar</button>
+                              
+                            </form>
+                           
+                        </div>
+                    </div>
+                </div>
+               
+                    
+                </div>
+
+                <article>
+                    <canvas>
+                        <img class="" src="" align="center" alt="imagen_descarga">
+                    </canvas>
+                </article>
+            </div>
+        </div>
+
+    </div>
+    </div>
+  
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+
+<script>
+
+$(function () { 
+    $("#holderusuario").hide();
+  $("#holderPassword").hide();
+  $("#loadingBtnIn").hide();
+
+$("#usuario").focus(function () {
+    $("#holderusuario").hide(); 
+
+  });
+
+ $("#password").focus(function () {
+    $("#holderPassword").hide();
+
+   }); 
+
+
+$("#Ingresar").click(function (evt) {
+evt.preventDefault();
+
+var txtUsuario = $("#usuario").val();
+var pass = $("#password").val();
+
+if(txtUsuario == ""){
+    $("#holderusuario").text("Usuario no puede estar vacio");
+    $("#holderusuario").show();  
+}else{
+
+
+var param = {
+    Usuario:txtUsuario,
+    password:pass,
+}
+
+$.ajax({
+url:"https://suritag.com/WebServiceSuritag/public/LoginU",
+dataType:"json",
+type:"post",
+data:param,
+beforeSend:function (xhr) {
+    
+    $("#loadingBtnIn").show();
+
+}
+
+
+}).done(function (data) { 
+    $("#loadingBtnIn").hide();
+console.log(data);
+
+if(data.Status == true){
+var Usuario  = data.obj ;
+localStorage.setItem( "UserData", JSON.stringify(Usuario)  );
+switch(Usuario.TipoUsuarios_idTipoUsuario){
+
+case  "1":
+    console.log(Usuario.Plataforma);
+    if(parseInt(Usuario.Plataforma) == "1"){
+        window.location = "ListaSitios.html";   
+    
+    }else{
+     alert("El usuario no posee roles en el sistema");   
+    }
+
+
+
+break;
+
+case  "2":
+window.location = "dasboardAdmin.html";   
+break;
+
+default:
+alert("El Usuario no posee Roles en el Sistema (Default)");
+break;
+
+
+break;
+
+
+
+
+
+}
+
+
+
+
+/**
+**Verificar el Tipo de Usuario
+**
+**/
+
+
+
+
+
+}else{
+  alert(data.Msg);  
+}
+
+
+ }).fail(function (error) {
+    $("#loadingBtnIn").hide();
+
+  });
+
+
+
+
+
+}
+
+
+
+
+
+
+  });
+
+ });
+
+
+</script>
+
+</body>
+
+</html>
+<!-- end document-->

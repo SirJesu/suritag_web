@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <meta name="theme-color" content="#34495E">
+    <!-- Title Page-->
+    <title>Agregar Sitio</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link  rel="stylesheet" href="vendor/SyncFusion/default-theme/ej.web.all.min.css" >
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+ 
+<style>
+
+th{
+align-items: center;
+align-content: center;
+padding-right: 15px;
+width: 100px;
+height: 20px;
+padding-left: 15px;
+}
+
+.nav_style{
+   background-color: #34495E !important; 
+    color: #fff;
+}
+
+.nav_style_text{
+    color: #fff;
+}
+
+body, button, input, textarea{
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important; 
+    font-size: 14px;
+    line-height: 18px;
+    transition: all .2s ease-in-out;
+    
+
+}
+
+
+
+.logo_ad{
+    width: 180px;
+    height: auto;
+}
+
+
+label{
+    color: #34495E  !important;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.moden{
+    /*margin: 20px !important;*/
+    margin-top: 20px;
+    border: 0px solid;
+    /*#D6DBDF*/
+    padding: 5px;
+    background-color: #fff;
+
+}
+.boton_guardar_sitio{
+    background-color: #0da94a;
+    color: #fff;
+}
+.titulo{
+    padding: 10px;
+    text-align: center;
+}
+
+input::placeholder{
+    filter: opacity(75%);
+}
+</style>
+
+</head>
+
+<body style="background: #D6DBDF; height: 100%; margin: 0px; padding: 0px;" class="animsition">
+    <div class="page-wrapper" style="margin: 0px; padding: 0px;">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block nav_style">
+            <style type="text/css">
+                .list-unstyled li a:hover{
+                    transition: 0.3s all ease;
+                    color: #fff !important;
+                    font-size: 1.1rem;
+                }
+            </style>
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="images/icon/suritag_admin.svg" alt="logo" class="logo_ad" />
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="ListaSitios.html">
+                                    <i class="fas fa-home"></i>Lista de Sitios
+                                    
+                                </a>
+                              
+                            </li>
+                            <li>
+                                <a href="Resrvas.html">
+                                    <i class="far fa-calendar-alt"></i>
+                                    Calendario de Reservas</a>
+                            </li>
+                            <li>
+                                <a href="Menu.html">
+                                    <i class="fas fa-coffee"></i>
+                                    Menu Diario</a>
+                            </li>
+                            <li>
+                                <a href="Ofertas.html">
+                                    <i class="fas fa-percent"></i>
+                                    Ofertas</a>
+                               
+                            </li>
+                         
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-button-item js-item-menu">
+                            <i class="zmdi zmdi-settings"></i>
+                            <div class="setting-dropdown js-dropdown">
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-account"></i>Account</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-settings"></i>Setting</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-globe"></i>Language</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-pin"></i>Location</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-email"></i>Email</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#">john doe</a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#">john doe</a>
+                                            </h5>
+                                            <span class="email">johndoe@example.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/suritag_admin.svg" alt="logo" class="logo_ad" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+                <div class="header-button-item has-noti js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                        <div class="notifi__title">
+                            <p>You have 3 Notifications</p>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c1 img-cir img-40">
+                                <i class="zmdi zmdi-email-open"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a email notification</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c2 img-cir img-40">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </div>
+                            <div class="content">
+                                <p>Your account has been blocked</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c3 img-cir img-40">
+                                <i class="zmdi zmdi-file-text"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a new file</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__footer">
+                            <a href="#">All notifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-button-item js-item-menu">
+                    <i class="zmdi zmdi-settings"></i>
+                    <div class="setting-dropdown js-dropdown">
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-account"></i>Account</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                            </div>
+                        </div>
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-globe"></i>Language</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-pin"></i>Location</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-email"></i>Email</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+        <style>
+        
+        #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
+        margin: 10px 10px 0 0;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        background-color: #fff;
+        font-family: Roboto;
+      }
+
+      #pac-container {
+        /*padding-bottom: 12px;
+        margin-right: 12px;*/
+      }
+
+      .pac-controls {
+        display: inline-block;
+        padding: 5px 11px;
+      }
+
+      /*
+
+      .pac-controls label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }*/
+
+      #pac-input {
+        background-color: #fff;
+
+        font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important; 
+        font-size: 14px;
+        line-height: 18px;
+        transition: all .2s ease-in-out;
+
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        margin-top: 20px;
+        /*padding: 0 11px 0 13px;*/
+        padding: 10px;
+        text-overflow: ellipsis;
+        width: 400px;
+        border-radius: 3px;
+
+        -webkit-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.27);
+-moz-box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.27);
+box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.27);
+
+      }
+
+      #pac-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
+      }
+      #map{
+          width: 100%;
+          height: 100%;
+      }
+        
+        </style>
+
+        <!-- PAGE CONTENT-->
+        <div class="container-fluid">
+            <!-- BREADCRUMB-->
+       <div class="row" style="" >
+        <div class='col-sm-12' >
+
+<!--
+<br>
+<h4 > Clientes/AgregarSitio </h4>
+<br>
+-->
+        </div>
+
+        
+            
+                <div class="col-sm-7" style="margin: 0px; padding: 0px;">
+                    <input id="pac-input" class="controls" type="search" placeholder="Busca la dirección">
+                    <div id="map" style="height: 600px; margin: 0px;"></div>
+                </div>
+        
+
+        
+
+<div class="col-sm-5">
+
+
+    <div class=" moden shadow-sm" style="border: 0px solid;"> 
+              <div class=""><!--card-header-->
+                    <h3 class="titulo">Datos del lugar:</h3>
+
+             </div>
+             <div class="card-body">
+             <form>
+                 <div class="form-group">
+                         <label>Nombre del Sitio:</label>
+                     <input class="form-control" id="nombreSitio" type="text" required placeholder="Nombre del Lugar">
+                 </div>
+                 <div class="form-group">
+                        <label>Dirección:</label>
+                    <input class="form-control" id="direccionSitio" type="text" required placeholder="coloque la dirección">
+                </div>
+              
+                <div class="form-group">
+                        <label>Pagina web:</label>
+                    <input class="form-control" id="pagina web " placeholder="www.sitio.com" type="url" >
+                </div>
+                <div class="form-group">
+                        <label>Tipo de sitio:</label>
+                   <select class="form-control" id="selectTipoSitio">
+                       
+                   </select>
+                </div>
+              
+
+
+
+ <button  id="btnGuardarSitio" class="btn boton_guardar_sitio">
+        <i id="btnLoadingSitio" class="fas fa-spinner fa-pulse"></i>
+     Guardar Sitio
+ </button>                   
+
+             </form>
+
+             </div>
+    </div>
+
+
+</div>
+
+
+       </div>   
+          
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/moment.js" >  </script>
+   
+    <!-- Bootstrap JS-->
+
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+
+  
+  <!--  <script src="vendor/SyncFusion/jsrender.min.js"></script>
+    <script src="vendor/SyncFusion/ej.web.all.min.js"></script>  -->
+ 
+
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+
+
+function SelectType() { 
+
+
+$.ajax({
+    url:"https://suritag.com/WebServiceSuritag/public/CategoriasAll",
+    type:"get",
+    dataType:"json",
+  
+}).done(function (data) { 
+
+    console.log(data);
+data.obj.forEach(element => {
+    $("#selectTipoSitio").append("<option value='"+element.idCategorias+"' >"+element.NombreCategoria+"</option>"); 
+});
+
+ }).fail(function (error) {
+
+alert("Error al Agregar el Sitio");
+
+  });
+
+ }
+
+
+
+function agregarSitio(sitio) {
+ var user = JSON.parse(  localStorage.getItem("UserData") );
+var foto =  "";
+console.log(user);
+if(sitio.photos == null ||sitio.photos == undefined || sitio.photos[0] == null || sitio.photos[0] == undefined ){
+
+
+}else{
+
+foto = sitio.photos[0].getUrl({'maxWidth':512, 'maxHeight': 512});
+
+
+}
+
+
+
+var param = {
+    Identificador:sitio.place_id,
+    Latitud:sitio.geometry.location.lat(),
+    Longitud:sitio.geometry.location.lng(),
+    direccionSitio:$("#direccionSitio").val(),
+    imagenPrimaria:foto,
+    imagenSecundaria:"",
+    idUsuario:user.idUsuario,
+    idCategoria:$("#selectTipoSitio").val(),
+    NombreSitio:sitio.name,
+    TelefonoSitio:user.TelefonoUsuario,
+
+};  
+
+
+$.ajax({
+    url:"https://suritag.com/WebServiceSuritag/public/RegistrarSitioF",
+    type:"post",
+    dataType:"json",
+    data:param,
+    beforeSend:function(xhr){
+$("#btnLoadingSitio").show();
+
+
+    }
+
+}).done(function (data) { 
+    $("#btnLoadingSitio").hide();
+    alert("Sitio agregado correctamente");
+ }).fail(function (error) {
+    $("#btnLoadingSitio").hide();
+    alert("Error al tratar de Registrar el Sitio");
+
+  });
+
+
+//Fin select 
+
+
+    
+
+
+
+  }
+
+        $(function () {
+            $("#btnLoadingSitio").hide();
+SelectType();
+
+
+
+
+
+           
+
+        });
+var posicion;
+function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 15, //13
+          mapTypeId: 'roadmap'
+        });
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+      
+  if(navigator.geolocation){
+
+ navigator.geolocation.getCurrentPosition(function (coords) {
+console.log(coords.coords);
+
+map.setCenter({
+    lat:coords.coords.latitude,
+    lng:coords.coords.longitude
+});
+
+   },function (error) {
+  //   alert("Error");
+
+ });
+
+
+  }else{
+      alert("Navegacion no soportada");
+  }
+
+
+ service = new google.maps.places.PlacesService(map);
+        searchBox.addListener('places_changed', function() {
+      // Clear out the old markers.
+    var placeText =   $("#pac-input").val();        
+
+Search(service,placeText,map);
+    
+
+         
+          });
+   
+      };
+
+function Search(search,text,map) {
+
+  var request = {
+    location: map.getCenter(),
+    radius: '30000',
+    query: text
+  };
+  service = new google.maps.places.PlacesService(map);
+  service.textSearch(request, callback);
+
+
+  }
+
+  function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+       
+       console.log(results[0]);
+       var sitio = results[0];
+
+$("#nombreSitio").val(sitio.name);
+$("#direccionSitio").val(sitio.formatted_address);
+
+
+$("#btnGuardarSitio").click(function (evt) {
+evt.preventDefault();
+
+agregarSitio(sitio);
+  });
+
+
+
+  }
+}
+
+
+
+
+    </script>
+   
+
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Bg2YOsO6fxAn5a7rNq9lMb723gEgLK0&libraries=places&callback=initAutocomplete"
+   async defer></script>
+
+</body>
+
+</html>
+<!-- end document-->

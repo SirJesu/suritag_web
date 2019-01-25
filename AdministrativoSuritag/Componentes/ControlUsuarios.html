@@ -1,0 +1,671 @@
+<div class="row" >
+   
+      
+        
+       
+
+<div class="col-sm-12" id="divTablaU"  >
+
+
+
+
+
+<table class="table table-borderless table-striped table-earning" id="tablaCliente"   >
+<thead style="margin-top: 10px" >
+  <th></th>
+<th>Nombre</th>
+<th>Correo</th>
+<th>Telefono</th>
+<th>Suscripcion</th>
+
+</thead>
+<tbody id="BodytablaClientes">
+
+
+</tbody>
+
+<tfoot style="margin: 10px">
+
+  <div class="card " style="padding:15px" >
+    <fieldset  >
+     <button id="btnAgregarU"  class="btn btn-outline-primary " > <i class="fas fa-plus"></i> Agregar nuevo cliente</button>
+      <button class="btn btn-outline-info " id="verdatosCliente"  ><i class="fas fa-eye"></i>  Ver datos</button>
+     
+
+
+    </fieldset>
+</div>
+
+</tfoot>
+
+
+
+
+</table>
+<h3  id="msgTableUsuarios" >No Datos</h3>
+
+
+
+
+
+</div>
+
+<!--  Formulario de Registro  -->
+
+
+<br>
+
+
+   <div class="col-sm-9 "  id="divRegistroU" >
+<div class="card" >
+
+<div class="card-header">
+<strong>Nuevo Usuario</strong>
+</div>
+
+  <div class="card-body">
+
+    <form>
+        <div class="form-group" >
+        <label class="form-control-label"   >Nombre</label>
+        
+        <input type="text"  id="nombreUsuarioRegistro"  class="form-control">
+        
+        
+        </div>
+        
+        <div class="form-group" >
+        <label class="form-control-label"   >Telefono</label>
+        
+        <input type="text" id="telefonoUsuarioRegistro"   class="form-control">
+        
+        
+        </div>
+        <div class="form-group" >
+                <label class="form-control-label"  >Correo Usuario</label>
+                
+                <input type="text" required  id="correoUsuarioRegistro"   class="form-control">
+                
+                
+          </div>
+          <div class="form-group" >
+                <label class="form-control-label"   >Direccion Usuario</label>
+                
+                <input type="text" required  id="direccionUsuarioDireccionRegistro"   class="form-control">
+                
+                
+          </div>
+     
+        
+
+<fieldset class="table-bordered" style="padding-left: 10px; padding-right: 10px" >
+<strong>Configuracion del usuario</strong>
+<br>
+<br>
+
+        <div class="form-group" >
+                <label class="form-control-label" >Seleccione el tipo de usuario</label>
+                
+               <select  id="selectTipoU" class="form-control" >
+              
+
+               </select>
+          </div>
+          <div class="form-group" >
+                <label class="form-control-label" >Plan de  Suscripcion</label>
+                
+               <select id="selectPlan"  class="form-control" >
+              
+
+               </select>
+          </div>
+
+
+</fieldset>
+
+
+        
+
+       <fieldset style="float: right">
+            <button type="button"  class="btn btn-warning" id="btnCancelarAgregarU"  >Cancelar</button>
+            <button  type="submit" class="btn btn-primary" id="btnGuardarU"  ><i id="btnLoadingGuardarFormClientes"  class="fas fa-spinner fa-pulse"></i>   Guardar</button>
+          
+       </fieldset>
+        
+        
+        
+            </form>
+
+
+  </div>
+        
+</div>
+
+
+
+   </div>
+
+   <div class="col-sm-9 "  id="divEditU" >
+    <div class="card" >
+    
+    <div class="card-header">
+    <strong>Datos de Usuario</strong>
+    </div>
+    
+      <div class="card-body">
+    
+        <form>
+            <div class="form-group" >
+            <label class="form-control-label"   >Nombre</label>
+            
+            <input type="text"  id="nombreUsuarioEdit"  class="form-control">
+            
+            
+            </div>
+            
+            <div class="form-group" >
+            <label class="form-control-label"   >Telefono</label>
+            
+            <input type="text" id="telefonoUsuarioEdit"   class="form-control">
+            
+            
+            </div>
+            <div class="form-group" >
+                    <label class="form-control-label"  >Correo Usuario</label>
+                    
+                    <input type="text" required  id="correoUsuarioEdit"   class="form-control">
+                    
+                    
+              </div>
+              <div class="form-group" >
+                    <label class="form-control-label"   >Direccion Usuario</label>
+                    
+                    <input type="text" required  id="direccionUsuarioDireccionEdit"   class="form-control">
+                    
+                    
+              </div>
+         
+            
+    
+    <fieldset class="table-bordered" style="padding-left: 10px; padding-right: 10px" >
+    <strong>Configuracion del usuario</strong>
+    <br>
+    <br>
+    
+            <div class="form-group" >
+                    <label class="form-control-label" >Seleccione el tipo de usuario</label>
+                    
+                   <select  id="selectTipoUEdit" class="form-control" >
+                    <option id="opcionDefaultTipoU" ></option>
+                     <optgroup  id="opcionesTipoUsuario"  label="Opciones">  
+
+
+                     </optgroup>
+
+
+                   </select>
+              </div>
+              <div class="form-group" >
+                    <label class="form-control-label" >Plan de  Suscripcion</label>
+                 
+                    <select  id="selectPlanUEdit" class="form-control" >
+                      <option id="opcionDefaultPlan" ></option>
+                       <optgroup  id="opcionesPlan"  label="Opciones">  
+  
+  
+                       </optgroup>
+  
+  
+                     </select>
+
+
+              </div>
+    
+    
+    </fieldset>
+    
+    
+            
+    
+           <fieldset style="float: right">
+                <button type="reset"  class="btn btn-warning" id="btnRegresarEdit"  >Regresar</button>
+                <button  type="button" class="btn btn-primary" id="btnGuardarUEdit"  ><i id="btnLoadEdit"  class="fas fa-spinner fa-pulse"></i> Guardar Edicion</button>
+              
+           </fieldset>
+            
+            
+            
+                </form>
+    
+    
+      </div>
+            
+    </div>
+    
+    
+    
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+</div>  <!-- 
+FIN DEL DIV  
+
+
+ -->
+
+<script>
+
+
+
+
+
+
+$(function () { 
+
+var editarUsuarioDiv =  $("#divEditU");
+var regU = $("#divRegistroU");
+var datosU = $("#divTablaU");
+
+function ShoWEditView() {
+  editarUsuarioDiv.show();
+  regU.hide();
+  datosU.hide();
+  $("#btnLoadEdit").hide();
+
+
+  }
+function ShowRegistrarUsuario() { 
+  editarUsuarioDiv.hide();
+  regU.show();
+  datosU.hide();
+
+ }
+
+ function ShowList() { 
+
+  editarUsuarioDiv.hide();
+  regU.hide();
+  datosU.show();
+
+  }
+
+
+
+
+
+
+  $("#msgTableUsuarios").hide();
+var selectedRow ;
+
+
+
+function GetSelectedFronTable() { 
+
+//radioTableClient
+ var id = $('input:radio[name=radioTableClient]:checked').val();
+
+ // alert(id);
+
+if(id== null || id==undefined ){
+
+alert("Usted debe Soleccionar un Usuario de la lista");
+
+}else{
+  MostrarDatosUsuario(id);
+
+}
+  
+  
+
+
+
+ }
+
+function MostrarDatosUsuario(id) {
+
+
+$.ajax({
+  url:"http://localhost/WebServiceSuritag/public/UserbyId",
+  type:"post",
+  dataType:"json",
+  data:{idUser:id},
+  beforeSend:function (xhr) {
+
+    
+  }
+
+}).done(function (data) { 
+  console.log(data);
+ $("#nombreUsuarioEdit").val(data.NombreUsuario);
+ $("#telefonoUsuarioEdit").val(data.TelefonoUsuario);
+ $("#correoUsuarioEdit").val(data.CorreoUsuario);
+ $("#direccionUsuarioDireccionEdit").val(data.direccionFisicaUsuario);
+ $("#opcionDefaultTipoU").val(data.TipoUsuarios_idTipoUsuario);
+ $("#opcionDefaultTipoU").text(data.descripcionTipoUsuario);
+ $("#opcionDefaultPlan").val(data.Premium_idPremium);
+ $("#opcionDefaultPlan").text(data.Descripcion);
+ $("#btnGuardarUEdit").val(data.idUsuario);
+
+
+
+
+ }).fail(function (error) { 
+alert("Error al Consultar los Datos del Usuariio");
+
+ });
+
+
+
+
+ShoWEditView();
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+function GetAllClients() { 
+
+
+
+
+$.ajax({
+url:"http://localhost/WebServiceSuritag/public/getClientes",
+type:"get",
+dataType:"json",
+cache:false
+}).done(function (data) {
+  console.log(data.value);
+
+$("#BodytablaClientes").empty();
+
+/*
+ <th></th>
+<th>Nombre</th>
+<th>Correo</th>
+<th>Telefono</th>
+<th>Suscripcion</th>
+
+
+
+*/
+
+
+
+var datos = data.value;
+
+datos.forEach(element => {
+  var target = "<tr class='hoverTab' >";
+      target = target +"<th><input type='radio'   name='radioTableClient' value='"+element.idUsuario+"' ></th>";
+      target = target +"<th><p>"+element.NombreUsuario+"</p></th>";
+      target = target +"<th><p>"+element.CorreoUsuario+"</p></th>";
+      target = target +"<th><p>"+element.TelefonoUsuario+"</p></th>";
+      target = target +"<th><p>"+element.Descripcion+"</p></th>";
+
+target = target +"</tr>";
+
+$("#BodytablaClientes").append(target);
+
+function select(id) { 
+  alert(id);
+
+ };
+
+$("#btnLoadingGuardarFormClientes").hide();
+
+
+});
+
+ 
+
+
+ShowList();
+
+  
+  }).fail(function (error) {
+
+
+
+    });
+
+
+
+
+
+
+
+ }
+
+
+
+
+function editarUsuario(id) {
+
+var param = {
+  idUsuario:id ,
+ NombreUsuario:$("#nombreUsuarioEdit").val(),
+ ImagenUsuario:"",
+ TelefonoUsuario: $("#telefonoUsuarioEdit").val(),
+ CorreoUsuario: $("#correoUsuarioEdit").val(),
+ direccionFisicaUsuario:$("#direccionUsuarioDireccionEdit").val(),
+ TipoUsuarios_idTipoUsuario:$("#selectTipoUEdit").val(),
+ Premium_idPremium:$("#selectPlanUEdit").val()
+
+};
+
+console.log(param);
+
+
+$.ajax({
+url:"http://localhost/WebServiceSuritag/public/userEdit",
+data:param,
+type:"post",
+dataType:"json",
+beforeSend:function (xhr) {
+  
+$("#btnLoadingGuardarFormClientes").show();
+
+}
+
+}).done(function (data) { 
+console.log(data);
+GetAllClients();
+
+
+}).fail(function (error) {
+ $("#btnLoadingGuardarFormClientes").hide();
+alert("Error al Registrar el Usuario");
+
+ });
+
+
+}
+
+function GuardarUsuario() {
+
+ var param = {
+  NombreUsuario:$("#nombreUsuarioRegistro").val(),
+  ImagenUsuario:"",
+  TelefonoUsuario: $("#telefonoUsuarioRegistro").val(),
+  CorreoUsuario: $("#correoUsuarioRegistro").val(),
+  direccionFisicaUsuario:$("#direccionUsuarioDireccionRegistro").val(),
+  UsuarioIDUsuario:$("#correoUsuarioRegistro").val(),
+  claveDeAccesoUsuario:$("#telefonoUsuarioRegistro").val(),
+  TipoUsuarios_idTipoUsuario:$("#selectTipoU").val(),
+  Premium_idPremium:$("#selectPlan").val()
+
+ };
+
+ console.log(param);
+
+
+$.ajax({
+ url:"http://localhost/WebServiceSuritag/public/RegistrarUsuario",
+ data:param,
+ type:"post",
+ dataType:"json",
+ beforeSend:function (xhr) {
+   
+$("#btnLoadingGuardarFormClientes").show();
+
+ }
+
+}).done(function (data) { 
+  $("#btnLoadingGuardarFormClientes").hide();
+console.log(data);
+GetAllClients();
+alert("Registro Exitoso");
+
+
+ }).fail(function (error) {
+  $("#btnLoadingGuardarFormClientes").hide();
+alert("Error al Registrar el Usuario");
+
+  });
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+function Init() {
+  GetAllClients();
+  $("#btnLoadingGuardarFormClientes").hide();
+ShowList();
+   
+//Tipos de Usuario  
+$.ajax({
+url:"http://localhost/WebServiceSuritag/public/TiposUsuario",
+type:"get",
+cache:false,
+dataType:"json",
+
+}).done(function (data) {
+
+    data.forEach(element => {
+
+$("#selectTipoU").append("<option value='"+element.idTipoUsuario+"' > "+element.descripcionTipoUsuario+" </option>");
+
+$("#opcionesTipoUsuario").append("<option value='"+element.idTipoUsuario+"' > "+element.descripcionTipoUsuario+" </option>");
+
+
+});
+
+  }).fail(function (error) { 
+
+ });
+
+//Tipos de Plan   
+ $.ajax({
+url:"http://localhost/WebServiceSuritag/public/getAllPlans",
+type:"get",
+cache:false,
+dataType:"json",
+
+}).done(function (data) {
+console.log(data);
+    data.forEach(element => {
+      
+$("#selectPlan").append("<option value='"+element.idPremium+"' > "+element.Descripcion+" </option>");
+$("#opcionesPlan").append("<option value='"+element.idPremium+"' > "+element.Descripcion+" </option>");
+
+
+});
+
+  }).fail(function (error) { 
+
+ });
+
+
+ 
+
+
+
+    
+$("#btnGuardarUEdit").click(function (evt) {
+
+editarUsuario( $(this).val()  );
+
+  });
+
+
+$("#btnCancelarAgregarU").click(function () {
+ShowList();
+
+  });
+
+  $("#btnGuardarU").click(function (ev) {
+    
+    ev.preventDefault();
+   GuardarUsuario();
+
+    });
+
+   $("#btnAgregarU").click(function () {
+
+ ShowRegistrarUsuario();
+
+     }); 
+
+     $("#verdatosCliente").click(function (evt) {
+  GetSelectedFronTable();
+
+
+       });
+
+       $("#btnRegresarEdit").click(function (evt) {
+ShowList();
+
+
+
+         });
+
+
+
+
+
+
+  };
+
+
+  Init();
+
+
+ });
+
+</script>

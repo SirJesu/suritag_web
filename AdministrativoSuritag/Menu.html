@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <!-- Title Page-->
+    <title>Gestion Menu</title>
+    <meta name="theme-color" content="#34495E">
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link  rel="stylesheet" href="vendor/SyncFusion/default-theme/ej.web.all.min.css" >
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="https://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+  
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+ 
+<style>
+
+th{
+align-items: center;
+align-content: center;
+padding-right: 15px;
+width: 100px;
+height: 20px;
+padding-left: 15px;
+}
+.nav_style{
+   background-color: #34495E !important; 
+    color: #fff;
+}
+
+body, button, input, textarea{
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important; 
+    font-size: 14px;
+    line-height: 18px;
+    transition: all .2s ease-in-out;
+    
+
+}
+
+
+.logo_ad{
+    width: 180px;
+    height: auto;
+}
+
+
+label{
+    color: #34495E  !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+}
+strong{
+    font-weight: 600 !important;
+    color: #2C3E50;
+}
+
+
+.boton{
+    transition: 0.3s all ease;
+    border-radius: 5px;
+    border:0px solid;
+    color: #fff;
+    margin-bottom: 3px;
+}
+.boton:hover{
+    transition: 0.3s all ease;
+    
+}
+.boton_filtrar{
+    background-color: #0da94a;
+}
+.boton_badge{
+    background-color: #ffc333;
+}
+.boton_agregar_nuevo{
+    background-color: #5565f2;
+}
+.boton_remover{
+    background-color: #C0392B;
+}
+.bbb{
+    background-color: #EBEDEF;
+    height: 35px;
+
+}
+input::placeholder{
+    font-style: italic;
+    filter: opacity(80%);
+}
+.text_{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.ff_{
+    border-radius: 5px;
+    border-bottom: 0px solid;
+}
+.ff_:hover{
+    transition: 0.3s all ease;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.12);
+
+    
+}
+</style>
+
+</head>
+
+<body style="background: #D6DBDF"  class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block nav_style">
+            <style type="text/css">
+                .list-unstyled li a:hover{
+                    transition: 0.3s all ease;
+                    color: #fff !important;
+                    font-size: 1.1rem;
+                }
+            </style>
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="images/icon/suritag_admin.svg" alt="logo" class="logo_ad" />
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="ListaSitios.html">
+                                    <i class="fas fa-home"></i>Lista de Sitios
+                                    
+                                </a>
+                              
+                            </li>
+                            <li>
+                                <a href="Resrvas.html">
+                                    <i class="far fa-calendar-alt"></i>
+                                    Calendario de Reservas</a>
+                            </li>
+                            <li>
+                                <a href="Menu.html">
+                                    <i class="fas fa-coffee"></i>
+                                    Menu Diario</a>
+                            </li>
+                            <li>
+                                <a href="Ofertas.html">
+                                    <i class="fas fa-percent"></i>
+                                    Ofertas</a>
+                               
+                            </li>
+                         
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-button-item js-item-menu">
+                            <i class="zmdi zmdi-settings"></i>
+                            <div class="setting-dropdown js-dropdown">
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-account"></i>Account</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-settings"></i>Setting</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-globe"></i>Language</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-pin"></i>Location</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-email"></i>Email</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#">john doe</a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#">john doe</a>
+                                            </h5>
+                                            <span class="email">johndoe@example.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+                <div class="header-button-item has-noti js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                        <div class="notifi__title">
+                            <p>You have 3 Notifications</p>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c1 img-cir img-40">
+                                <i class="zmdi zmdi-email-open"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a email notification</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c2 img-cir img-40">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </div>
+                            <div class="content">
+                                <p>Your account has been blocked</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c3 img-cir img-40">
+                                <i class="zmdi zmdi-file-text"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a new file</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__footer">
+                            <a href="#">All notifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-button-item js-item-menu">
+                    <i class="zmdi zmdi-settings"></i>
+                    <div class="setting-dropdown js-dropdown">
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-account"></i>Account</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                            </div>
+                        </div>
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-globe"></i>Language</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-pin"></i>Location</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-email"></i>Email</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="" style="margin: 0px;padding: 0px; width: 100%;">
+            <div class="col-sm-12 col-12 col-md-12" style="background: white;margin-bottom: 2%;padding-bottom: 20px;padding-top: 20px; width: 100%;">
+
+                  <h4>Plataforma / Menu</h4>  
+
+                </div>
+            <!-- BREADCRUMB-->
+         <div class="container" style="margin: 0px;padding: 0px; width: 100%;">
+
+            <div  class="row justify-content-center" style="margin: 0px;padding: 0px;">
+                <div class="col-9 shadow-sm" style="background-color: #fff; padding: 10px; border-radius: 5px;">
+                     
+                        <div> 
+                            <!--width: 100%;height: 60px;background: white;padding: 20px;display: inline;margin-left: 7%; border-radius: 5px;-->
+
+                                 <label style="color: black"><strong>Sitios Registrados: </strong></label>
+                                 <select  id="sitiosDisponibles"  class="form-control-sm" style="width: 150px !important;margin-right: 5%">
+                                     <option value="-1" >Seleccione</option>
+                                 </select>
+
+                                <label style="color: black" ><strong>Buscar: </strong></label>
+                                <input class="form-control-sm bbb" placeholder="Escriba aquí...">
+                                <button class="btn boton boton_filtrar" ><i class="fas fa-search"></i> Filtrar </button>
+
+                                <div style="width: 100%;display: inline; margin-left: 8%;">
+                                <button style="" type="button" class="btn boton boton_badge">Total <span class="badge" style="background-color: #F39C12;color: #fff;">4</span></button>
+
+                                 
+                                 <button  id="btnAgregarNuevo" class="btn boton boton_agregar_nuevo"><i class="fas fa-plus-circle"></i> Agregar nuevo</button>
+                                 </div>     
+                         
+                     </div>
+
+                </div>
+
+
+<div style="margin-top: 1%" class="col-sm-12 col-12 col-md-12">
+
+        <ul   id="listaMenues" class="list-group list-group-flush">
+         <!--       <li class="list-group-item" style="width: 70%;margin-top:5%;margin-left: 20%" >
+            <div class="card">
+  <div  class="row">
+<div class="col-sm-3">
+    <img width="200" src="images/food-salad-healthy-46239.jpg" height="150" >
+</div>
+<div class="col-sm-7">
+    <h3 style="width: 100%" >Nombre de la Comida</h3>
+    <button class="btn btn-danger" >Precio <span class="badge badge-warning">$10000</span></button>
+     <h6>Esta es Una Breve descripcion de la comida que estoy presentando</h6>
+
+</div>
+  <div class="col-sm-2">
+     <button class="btn btn-dark" style="margin-top: 10px"  >Remover</button>
+  </div>
+
+  </div>
+           </div>   
+               </li> -->
+                
+              </ul>
+
+
+    
+    </div>
+
+            </div>
+
+
+
+
+         </div>
+        
+
+    </div>
+
+<!----Modal Agregar Sitios-->
+
+<div class="modal fade" id="modalAgregarMenu" tabindex="-1" role="dialog" aria-labelledby="mediumModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mediumModalLabel">Nuevo elemento de menu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                
+                    <form>
+             <div class="form-group">
+ <label>Nombre: </label>
+ <input type="text" id="nombreItemRegistro" class="form-control" placeholder="nombre del producto">
+
+             </div>
+             <div class="form-group">
+                    <label>Descripción: </label>
+                    <input type="text" id="descripcionItemRegistro" class="form-control" placeholder="descripción...">
+                   
+                       </div>
+                       <div class="form-group">
+                            <label>Precio:</label>
+                            <input type="number" id="precioItemRegistro" placeholder="15000" class="form-control" >
+                           
+                    </div>
+                  <div class="form-group">
+                 <label>Categoria Para el Item</label>
+                 <select id="CategoriaItemRegistro" class="form-control-sm" >
+                <option value="Comida" >Comida</option>
+                <option value="Bebida" >Bebida </option>
+               
+
+                 </select>
+
+                  </div>
+
+                  <div id="imgUploadMenu" ></div>
+
+
+
+
+<button  hidden  type="reset" id="clean" >Reser</button>
+                    </form>
+
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar ventana</button>
+                    <button type="button"  id="btnGuardar"  type="button" class="btn btn-primary"><i id="loadinGuardarItem" class="fas fa-spinner fa-pulse"></i>  Guardar</button>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal Fin Agregar-->
+
+
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/moment.js" >  </script>
+   
+    <!-- Bootstrap JS-->
+
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="https://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+
+  
+  <!--  <script src="vendor/SyncFusion/jsrender.min.js"></script>
+    <script src="vendor/SyncFusion/ej.web.all.min.js"></script>  -->
+ 
+
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+
+    function getBase64(file) {
+   var reader = new FileReader();
+   reader.readAsDataURL(file);
+   reader.onload = function () {
+    // console.log(reader.result);
+    imgBase = reader.result;
+   };
+   reader.onerror = function (error) {
+     console.log('Error: ', error);
+   };
+}
+
+var imgBase ;
+
+
+$("#imgUploadMenu").uploadFile({
+	fileName:"MenuArchivo",
+    maxFileCount:1,
+    allowedTypes:"jpg,png,gif",
+    acceptFiles:"image/",
+    autoSubmit:false,
+    onSelect:function(files)
+{
+    files[0].name;
+    files[0].size;
+
+  imgBase =  getBase64(files[0]);
+    return true; //to allow file submission.
+}
+   
+	});
+
+
+        $(function () {
+            $("#loadinGuardarItem").hide();
+DysplaySitios();
+      
+
+
+$("#sitiosDisponibles").change(function () {
+var id = $(this).val();
+
+if(id == "-1"){
+
+}else{
+    LoadMenuBySitio(id);
+}
+
+
+
+  });
+
+         $("#btnAgregarNuevo").click(function (evt) {
+ evt.preventDefault();
+
+
+   $("#modalAgregarMenu").modal("show");  
+
+
+
+  
+
+
+           });
+
+
+         $("#btnGuardar").click(function (evt) {
+   evt.preventDefault();
+ var param = {
+    Nombre:$("#nombreItemRegistro").val(),
+    Imagen:imgBase,
+    Descripcion:$("#descripcionItemRegistro").val(),
+    TipoMenu:$("#CategoriaItemRegistro").val(),
+    Precio:$("#precioItemRegistro").val(),
+    idSitio:$("#sitiosDisponibles").val()
+
+ };
+   
+   $.ajax({
+       url:"https://suritag.com/WebServiceSuritag/public/RegistrarMenu",
+       type:"post",
+       dataType:"json",
+       data:param,
+       beforeSend:function(){
+  $("#loadinGuardarItem").show();
+       }
+
+
+   }).done(function (data) { 
+       $("#clean").click();
+       $("#modalAgregarMenu").modal("hide");
+       alert("Agregado Correctamente");
+
+LoadMenuBySitio( $("#sitiosDisponibles").val() );
+
+    }).fail(function (error) {
+       alert("Error al tratar de Ingresar el item");
+     }).always(function () {
+        $("#loadinGuardarItem").hide();
+     });
+
+
+
+
+
+           });  
+
+        });
+
+
+
+
+        function DysplaySitios() {
+var user = JSON.parse(  localStorage.getItem("UserData")  );
+
+$.ajax({
+    type: "post",
+    url: "https://suritag.com/WebServiceSuritag/public/GetSitioByUser",
+    data: {idUsuario:user.idUsuario},
+    dataType: "json"
+}).done(function (data) { 
+
+if(data == [] || data == null){
+
+}else{
+    data.forEach(element => {
+
+$("#sitiosDisponibles").append("<option value='"+element.idSitos+"' >"+element.NombreSitio+"</option>");
+
+        
+        
+
+
+    });
+}
+
+
+
+ }).fail(function (error) {
+alert("Error");
+  });
+
+
+
+
+  }
+function LoadMenuBySitio(idSitios) {
+
+$.ajax({
+    url:"https://suritag.com/WebServiceSuritag/public/MenuBySitios",
+    type:"get",
+    dataType:"json",
+    data:{idSitio:idSitios}
+}).done(function (data) { 
+    $("#listaMenues").empty();  
+if(data.value.length == 0){
+    alert("No se encontraron Items en el menu ");
+}else{
+
+data.value.forEach(element => {
+
+var content = `     <li class=""  style="width: 76%;margin-left: 12%; padding:0px; background-color:transparent;">
+            <div class="card ff_" style="margin:5px; padding:10px;">
+  <div  class="row">
+<div class="col-sm-3">
+    <img width="200" src="`+element.Imagen+`" height="150" >
+</div>
+<div class="col-sm-7">
+    <h3 style="width: 100%" class="text_">`+element.Nombre+` <span class="badge badge-warning">$`+element.Precio+`</span></h3>
+    <h6 class="text_">`+element.Descripcion+`</h6>
+    <!--<button class="btn">Precio </button>-->
+
+</div>
+  <div class="col-sm-2">
+     <button class="btn boton boton_remover" style="margin-top: 10px;"><i class="fas fa-times-circle"></i> Remover</button>
+  </div>
+
+  </div>
+           </div>   
+               </li>`;
+
+$("#listaMenues").append(content);
+    
+});
+
+
+
+}
+
+
+
+ }).fail(function (error) {
+
+  }).always(function () {
+
+  });
+
+
+
+  }
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->

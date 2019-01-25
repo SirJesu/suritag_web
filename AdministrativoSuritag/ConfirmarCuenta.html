@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="vendor/bootstrap-4.1/bootstrap.min.css" />
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js" ></script>
+ 
+</head>
+
+<style>
+
+.center-panel{
+margin-top: 5%;
+
+
+border-color: #C13008 ;
+padding-right: 10%;
+padding-left: 5%;
+padding-bottom: 5%;
+padding-top: 5%;
+
+
+}
+
+
+
+</style>
+<body>
+
+
+
+    <div class="row" >
+
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-6 col-12 col-md-6 col-xl-6">
+
+                <div  class="center-panel card">
+
+                        <h5 class="title-1" >Cambie su contraseña para poder acceder al sitio</h5>
+                        <form class="form">
+                
+                <div class="form-group"> 
+                <label>Nueva clave de acceso</label>
+                
+                <input class="form-control" type="password" id="password1" >
+                
+                </div>
+                
+                
+                <div class="form-group"> 
+                        <label>Repita la clave de acceso</label>
+                       
+                        <input class="form-control"  type="password" id="password2" >
+                       
+                        
+                 </div>
+                
+                 <button  type="button" id="btnGuardar" class="btn btn-success btn-sm" ><img src="images/Spinner-1s-200px.svg" id="loading" width="20px" height="20px" >  Guardar y continuar</button>
+                 
+                
+                
+                        </form>  
+                        
+                
+                
+                    </div>
+
+
+         </div>
+
+        <div class="col-sm-3">
+
+            </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+    
+    
+     $(function () { 
+         
+
+        $("#loading").hide();
+ConfirmarEmail( getParameterByName("TokenUser")  );
+  $("#btnGuardar").click(function (evt) {
+evt.preventDefault();
+$("#loading").show();
+var pw1 = $("#password1").val();
+var pw2 = $("#password2").val();
+
+if(pw1 != pw2){
+    $("#loading").hide();
+    alert("las claves de acceso no coinciden");
+}else{
+
+    $.ajax({
+        url:"https://suritag.com/WebServiceSuritag/public/CambiarPassUsuario",
+        type:"post",
+        dataType:"json",
+        beforeSend:function(){
+            $("#loading").show();
+        },
+        data:{
+            idUsuario:getParameterByName("TokenUser"),
+            password:pw1
+        }
+    }).done(function (data) { 
+ alert("Cambio exitoso sera redireccionado al login de la plataforma");
+ window.location = "login.html";
+
+     }).fail(function (error) { 
+alert("error al tratar de cambiar la clave de acceso");
+
+      });
+
+
+
+    
+}
+
+
+
+    });
+
+
+
+      });
+
+
+      function ConfirmarEmail(idUsuario) { 
+          console.log("confirm");
+if(idUsuario == null || idUsuario == undefined){
+
+
+
+}else{
+
+
+    $.ajax({
+ url:"https://suritag.com/WebServiceSuritag/public/confirmedEmailUsuario",
+ data:{idUsuario:idUsuario},
+ dataType:"json",
+ type:"post"
+
+        }).fail(function (error) { 
+alert("error al tratar de confirmar su email");
+
+         });
+
+
+
+
+}
+       }
+    
+    
+    
+    
+    
+       function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+    
+    </script>
+
+
+
+
+    
+</body>
+</html>

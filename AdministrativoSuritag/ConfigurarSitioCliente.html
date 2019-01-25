@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Configurar Sitio</title>
+    <meta name="theme-color" content="#34495E">
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+    <link  rel="stylesheet" href="vendor/SyncFusion/default-theme/ej.web.all.min.css" >
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <script  src="js/config.js"></script>
+ 
+<style>
+
+th{
+align-items: center;
+align-content: center;
+padding-right: 15px;
+width: 100px;
+height: 20px;
+padding-left: 15px;
+}
+.nav_style{
+   background-color: #34495E !important; 
+    color: #fff;
+}
+
+body, button, input, textarea{
+    font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif !important; 
+    font-size: 14px;
+    line-height: 18px;
+    transition: all .2s ease-in-out;
+    
+    color: #2C3E50;
+}
+
+
+.logo_ad{
+    width: 180px;
+    height: auto;
+}
+
+
+.boton{
+    transition: 0.3s all ease;
+    border-radius: 5px;
+    border:0px solid;
+    color: #fff;
+    margin-bottom: 3px;
+}
+.boton:hover{
+    color: #fff;
+}
+
+
+.img-table{
+ background-image:  url('images/table64.png');  
+
+}
+.border{
+    background: #E7E5E5;
+    border-style: solid !important;
+    border-color: black !important;
+}
+
+.table-mesa-space{
+width: 10px !important;
+height: 80px !important;
+align-content: center;
+text-align: center;
+
+
+}
+
+.selectedMesa{
+    background:red;color:white;
+}
+.passMesa{
+    background: black;color:white;
+}
+
+.boton_galeria{
+    background-color: #F5B041;
+}
+.boton_resena{
+    background-color: #3498DB;
+}
+
+
+</style>
+
+</head>
+
+<body style="background: #D6DBDF"  class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop3 d-none d-lg-block nav_style">
+            <style type="text/css">
+                .list-unstyled li a:hover{
+                    transition: 0.3s all ease;
+                    color: #fff !important;
+                    font-size: 1.1rem;
+                }
+            </style>
+            <div class="section__content section__content--p35">
+                <div class="header3-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="images/icon/suritag_admin.svg" alt="logo" class="logo_ad" />
+                        </a>
+                    </div>
+                    <div class="header__navbar">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="ListaSitios.html">
+                                    <i class="fas fa-home"></i>Lista de Sitios
+                                    
+                                </a>
+                              
+                            </li>
+                            <li>
+                                <a href="Resrvas.html">
+                                    <i class="far fa-calendar-alt"></i>
+                                    Calendario de Reservas</a>
+                            </li>
+                            <li>
+                                <a href="Menu.html">
+                                    <i class="fas fa-coffee"></i>
+                                    Menu Diario</a>
+                            </li>
+                            <li>
+                                <a href="Ofertas.html">
+                                    <i class="fas fa-percent"></i>
+                                    Ofertas</a>
+                               
+                            </li>
+                         
+                        </ul>
+                    </div>
+                    <div class="header__tool">
+                        <div class="header-button-item has-noti js-item-menu">
+                            <i class="zmdi zmdi-notifications"></i>
+                            <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                                <div class="notifi__title">
+                                    <p>You have 3 Notifications</p>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c1 img-cir img-40">
+                                        <i class="zmdi zmdi-email-open"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a email notification</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c2 img-cir img-40">
+                                        <i class="zmdi zmdi-account-box"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>Your account has been blocked</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__item">
+                                    <div class="bg-c3 img-cir img-40">
+                                        <i class="zmdi zmdi-file-text"></i>
+                                    </div>
+                                    <div class="content">
+                                        <p>You got a new file</p>
+                                        <span class="date">April 12, 2018 06:50</span>
+                                    </div>
+                                </div>
+                                <div class="notifi__footer">
+                                    <a href="#">All notifications</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-button-item js-item-menu">
+                            <i class="zmdi zmdi-settings"></i>
+                            <div class="setting-dropdown js-dropdown">
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-account"></i>Account</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-settings"></i>Setting</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                    </div>
+                                </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-globe"></i>Language</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-pin"></i>Location</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-email"></i>Email</a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#">john doe</a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#">john doe</a>
+                                            </h5>
+                                            <span class="email">johndoe@example.com</span>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-settings"></i>Setting</a>
+                                        </div>
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER DESKTOP-->
+
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile header-mobile-2 d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo-white.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="sub-header-mobile-2 d-block d-lg-none">
+            <div class="header__tool">
+                <div class="header-button-item has-noti js-item-menu">
+                    <i class="zmdi zmdi-notifications"></i>
+                    <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
+                        <div class="notifi__title">
+                            <p>You have 3 Notifications</p>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c1 img-cir img-40">
+                                <i class="zmdi zmdi-email-open"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a email notification</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c2 img-cir img-40">
+                                <i class="zmdi zmdi-account-box"></i>
+                            </div>
+                            <div class="content">
+                                <p>Your account has been blocked</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__item">
+                            <div class="bg-c3 img-cir img-40">
+                                <i class="zmdi zmdi-file-text"></i>
+                            </div>
+                            <div class="content">
+                                <p>You got a new file</p>
+                                <span class="date">April 12, 2018 06:50</span>
+                            </div>
+                        </div>
+                        <div class="notifi__footer">
+                            <a href="#">All notifications</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-button-item js-item-menu">
+                    <i class="zmdi zmdi-settings"></i>
+                    <div class="setting-dropdown js-dropdown">
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-account"></i>Account</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-settings"></i>Setting</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-money-box"></i>Billing</a>
+                            </div>
+                        </div>
+                        <div class="account-dropdown__body">
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-globe"></i>Language</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-pin"></i>Location</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-email"></i>Email</a>
+                            </div>
+                            <div class="account-dropdown__item">
+                                <a href="#">
+                                    <i class="zmdi zmdi-notifications"></i>Notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-wrap">
+                    <div class="account-item account-item--style2 clearfix js-item-menu">
+                        <div class="image">
+                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                        </div>
+                        <div class="content">
+                            <a class="js-acc-btn" href="#">john doe</a>
+                        </div>
+                        <div class="account-dropdown js-dropdown">
+                            <div class="info clearfix">
+                                <div class="image">
+                                    <a href="#">
+                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <h5 class="name">
+                                        <a href="#">john doe</a>
+                                    </h5>
+                                    <span class="email">johndoe@example.com</span>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__body">
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                </div>
+                                <div class="account-dropdown__item">
+                                    <a href="#">
+                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                </div>
+                            </div>
+                            <div class="account-dropdown__footer">
+                                <a href="#">
+                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END HEADER MOBILE -->
+
+        <!-- PAGE CONTENT-->
+        <div class="container-fluid">
+            <!-- BREADCRUMB-->
+          
+           <div class="row" style="margin-top: 1%">
+
+            <div class="col-sm-12" style="margin-left: 5%;margin-right: 5%" >
+ 
+               <div style="margin: 10px; padding: 10px;margin-bottom: 20px;">
+                <button type="button" class="btn boton boton_galeria btn-lg" style="margin: 5px;float: left;"><i class="fas fa-images"></i>  Galeria de Imagenes</button> 
+                <button type="button" class="btn boton boton_resena btn-lg" style="margin: 5px;float: left;" ><i class="fas fa-comments"></i>  Reseñas</button> 
+                
+
+               </div>
+                <br>
+            
+            </div>
+            <br>
+
+<div class="col-sm-12">
+ <!-- END BREADCRUMB-->
+ <div style="margin-left: 5%;margin-right: 5%; margin-top: 2%;">
+
+        <div  class="row">
+<div class="col-sm-12 col-12">
+<div class="card">
+
+<div class="card-header">
+<h4 id="nombreSitio" ></h4>
+</div>
+<div class="card-content">
+
+                <!-- Nav tabs -->
+<ul class="nav nav-tabs">
+<li class="nav-item">
+  <a class="nav-link active" data-toggle="tab" href="#home">Espacios</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" data-toggle="tab" href="#menu1">Mesas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#menu2">Asignaciones</a>
+  </li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active container" id="home">
+    <br>
+  <div class="row">
+      <div  class="col-sm-6 col-6">
+<table  class="table " style="background-color: #fff; color: #2C3E50; font-weight: 600;">
+<thead>
+<tr>
+    <th>N°</th>
+    <th>Indicador</th>
+    <th></th>
+</tr>
+</thead>
+ <tbody id="ListaIndicator" >
+       
+
+ </tbody>
+</table>
+
+
+      </div>
+      <div  class="col-sm-6 col-6">
+     <div class="card" >
+           <div class="card-header">
+             <h6>Nuevo</h6>   
+           </div>  
+           <div class="card-body">
+             <input type="text" id="nombrePlantaSitio" placeholder="escriba el  indicador del sitio" >  
+                 
+           </div>
+           <div class="card-footer">
+            <button class="btn btn-primary" id="btnGuardarPlanta" > <i  id="loadinGuardarPlanta" class="fas fa-sync fa-spin"></i> Guardar</button>
+           </div>
+
+     </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+<div class="tab-pane container" id="menu1">
+<br>
+<div class="row">
+<div class="col-sm-6 col-6">
+<div class="well" style="margin-top: 5px" >
+<label>Filtrar Por 
+
+<select class="form-contro-sm">
+<option>Habilitadas</option>
+<option>Desabilitadas</option>
+</select>
+
+</label>
+
+</div>
+
+<table class="table " style="background-color: #fff; color: #2C3E50; font-weight: 600;" >
+<thead>
+<tr>
+    <th>Id</th>
+    <th>$ por persona</th>
+    <th>% adelanto</th>
+    <th></th>
+
+</tr>
+</thead>
+<tbody id="bodytableMesas">
+
+</tbody  >
+
+
+</table>
+
+
+</div>
+<div class="col-sm-6 col-6">
+
+<div class="card">
+<div class="card-header">
+<h5>Nuevas Mesas</h5>
+
+</div>
+
+    <div class="card-body">
+
+        <form>
+        <div class="form-group">
+            <label>Identificador</label>
+            <input class="form-control" id="identificador" type="text" placeholder="mesa 1">
+        </div>
+        <div class="form-group">
+                <label>Valor por Persona</label>
+                <input class="form-control" id="valorPorPersona" type="number">
+            </div>
+            <div class="form-group">
+                    <label>% Adelanto (Reserva) </label>
+                    <input class="form-control" id="PorcentajeAdelantado"   type="number">
+                </div>
+               
+                    <div class="form-group">
+                            <label>Max de personas </label>
+                            <input class="form-control" id="MaxPersonas"  type="number">
+                        </div>
+                        <div class="form-group">
+                                <label>Diviciones </label>
+                               <select id="selectiDiv" class="form-control">
+
+                               </select>
+                            </div>
+
+        <button type="button" id="btnGuardarMesas" class="btn btn-success"><i id="loadingMesas" class="fas fa-spinner fa-pulse"></i>  Guardar</button>
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+<div class="tab-pane container" id="menu2">
+    
+  <br>
+<div class="row">
+
+    <div class="col-sm-4 col-4 col-ms-4">
+
+            <h4>Espacios del Sitio</h4>
+            <select id="space" class="form-control-sm">
+                <option value="-1" >Seleccione</option>
+            
+            </select>
+
+            <ul id="listMesasConfigT"  class="list-group" style="margin-top: 10px">
+                    <li class="list-group-item  list-mesas-group "  >First item</li>
+                    <li class="list-group-item list-mesas-group">Second item</li>
+                    <li class="list-group-item list-mesas-group">Third item</li>
+            </ul>
+
+    </div>
+    <div class="col-sm-8 col-8 col-ms-8">
+            <h4>Elementos</h4>
+            <div class="row " style="padding: 10px" >
+                
+                   <div class="btn-group" style="margin-bottom: 5px" >
+                        <button type="button"  data-toggle="tooltip" data-placement="top" value="mesaredonda" title="mesa redonda" class="btn btn-outline-primary herramienta"><img src="images/coffee-table.png" ></button>
+                        <button type="button" data-toggle="tooltip" data-placement="top" value="mesacuadrada" title="mesa cuadrada" class="btn btn-outline-primary  herramienta"> <img src="images/table.png" > </button>
+                        <button type="button" data-toggle="tooltip" data-placement="top" value="pared" title="pared" class="btn btn-outline-primary herramienta"><img src="images/brickwall.png"  width="32" height="32"  ></button>
+                        <button type="button" data-toggle="tooltip" data-placement="top" value="puerta" title="puerta" class="btn btn-outline-primary herramienta"><img src="images/doors.png" ></button>
+                        <button type="button" data-toggle="tooltip" data-placement="top" value="recepcion" title="Recepcion"  class="btn btn-outline-primary herramienta"> <img src="images/reception.png" > </button>
+                       
+                       
+
+                   </div>
+                      
+                  <!--  <div style="margin-top: 20%;margin-left: 20%;">
+                            <img   src="images/table64.png" >
+                            
+                    </div>
+                    <center><h6>Nombre Mesa</h6></center>
+                    <br>  -->
+                    <table class="table table-bordered" >
+
+                        <tbody>
+                               <tr>
+                                   <th class="table-mesa-space " id="tableA1" > </th>
+                                   <th class="table-mesa-space" id="tableA2" ></th>
+                                   <th class="table-mesa-space" id="tableA3"></th>
+                                   <th class="table-mesa-space" id="tableA4" ></th>
+                                   <th class="table-mesa-space" id="tableA5" ></th>
+                                   <th class="table-mesa-space" id="tableA6" ></th>
+                                   <th class="table-mesa-space" id="tableA7" ></th>
+                                   <th class="table-mesa-space" id="tableA8" ></th>
+                                   <th class="table-mesa-space" id="tableA9" ></th>
+                                   <th class="table-mesa-space" id="tableA10" ></th>
+                                  
+                               </tr>  
+                               <tr>
+                                    <th class="table-mesa-space" id="tableB1" ></th>
+                                    <th class="table-mesa-space" id="tableB2" ></th>
+                                    <th class="table-mesa-space" id="tableB3" ></th>
+                                    <th class="table-mesa-space" id="tableB4" ></th>
+                                    <th class="table-mesa-space" id="tableB5" ></th>
+                                    <th class="table-mesa-space" id="tableB6" ></th>
+                                    <th class="table-mesa-space" id="tableB7" ></th>
+                                    <th class="table-mesa-space" id="tableB8" ></th>
+                                    <th class="table-mesa-space" id="tableB9" ></th>
+                                    <th class="table-mesa-space" id="tableB10" ></th>
+                                   
+                                </tr>    
+                                <tr>
+                                        <th class="table-mesa-space" id="tableC1"></th>
+                                        <th class="table-mesa-space" id="tableC2"></th>
+                                        <th class="table-mesa-space" id="tableC3"></th>
+                                        <th class="table-mesa-space" id="tableC4"></th>
+                                        <th class="table-mesa-space" id="tableC5"></th>
+                                        <th class="table-mesa-space" id="tableC6"></th>
+                                        <th class="table-mesa-space" id="tableC7"></th>
+                                        <th class="table-mesa-space" id="tableC8"></th>
+                                        <th class="table-mesa-space" id="tableC9"></th>
+                                        <th class="table-mesa-space" id="tableC10"></th>
+                                        
+                                    </tr>    
+                                    <tr>
+                                            <th class="table-mesa-space" id="tableD1" ></th>
+                                            <th class="table-mesa-space" id="tableD2" ></th>
+                                            <th class="table-mesa-space" id="tableD3" ></th>
+                                            <th class="table-mesa-space" id="tableD4" ></th>
+                                            <th class="table-mesa-space" id="tableD5" ></th>
+                                            <th class="table-mesa-space" id="tableD6"></th>
+                                            <th class="table-mesa-space" id="tableD7"></th>
+                                            <th class="table-mesa-space" id="tableD8"></th>
+                                            <th class="table-mesa-space" id="tableD9"></th>
+                                            <th class="table-mesa-space" id="tableD10"></th>
+                                            
+                                           
+                                        </tr> 
+                                        <tr>
+                                                <th class="table-mesa-space" id="tableE1" ></th>
+                                                <th class="table-mesa-space" id="tableE2" ></th>
+                                                <th class="table-mesa-space" id="tableE3" ></th>
+                                                <th class="table-mesa-space" id="tableE4" ></th>
+                                                <th class="table-mesa-space" id="tableE5" ></th>
+                                                <th class="table-mesa-space" id="tableE6"></th>
+                                                <th class="table-mesa-space" id="tableE7"></th>
+                                                <th class="table-mesa-space" id="tableE8"></th>
+                                                <th class="table-mesa-space" id="tableE9"></th>
+                                                <th class="table-mesa-space" id="tableE10"></th>
+                                               
+                                            </tr> 
+                                            
+                                            <tr>
+                                                    <th class="table-mesa-space" id="tableF1" ></th>
+                                                    <th class="table-mesa-space" id="tableF2" ></th>
+                                                    <th class="table-mesa-space" id="tableF3" ></th>
+                                                    <th class="table-mesa-space" id="tableF4" ></th>
+                                                    <th class="table-mesa-space" id="tableF5" ></th>
+                                                    <th class="table-mesa-space" id="tableF6"></th>
+                                                    <th class="table-mesa-space" id="tableF7"></th>
+                                                    <th class="table-mesa-space" id="tableF8"></th>
+                                                    <th class="table-mesa-space" id="tableF9"></th>
+                                                    <th class="table-mesa-space" id="tableF10"></th>
+                                                   
+                                                </tr> 
+                                                <tr>
+                                                        <th class="table-mesa-space" id="tableG1" ></th>
+                                                        <th class="table-mesa-space" id="tableG2" ></th>
+                                                        <th class="table-mesa-space" id="tableG3" ></th>
+                                                        <th class="table-mesa-space" id="tableG4" ></th>
+                                                        <th class="table-mesa-space" id="tableG5" ></th>
+                                                        <th class="table-mesa-space" id="tableG7"></th>
+                                                        <th class="table-mesa-space" id="tableG7"></th>
+                                                        <th class="table-mesa-space" id="tableG8"></th>
+                                                        <th class="table-mesa-space" id="tableG9"></th>
+                                                        <th class="table-mesa-space" id="tableG10"></th>
+                                                      
+                                                       
+                                                    </tr>   
+                                                    <tr>
+                                                        <th class="table-mesa-space" id="tableH1" ></th>
+                                                        <th class="table-mesa-space" id="tableH2" ></th>
+                                                        <th class="table-mesa-space" id="tableH3" ></th>
+                                                        <th class="table-mesa-space" id="tableH4" ></th>
+                                                        <th class="table-mesa-space" id="tableH5" ></th>
+                                                        <th class="table-mesa-space" id="tableH6" ></th>
+                                                        <th class="table-mesa-space" id="tableH7" ></th>
+                                                        <th class="table-mesa-space" id="tableH8" ></th>
+                                                        <th class="table-mesa-space" id="tableH9" ></th>
+                                                        <th class="table-mesa-space" id="tableH10" ></th>
+                                                       
+                                                    </tr>        
+                        </tbody>
+
+                    </table>
+                    
+                    
+                    
+            </div>
+                    
+
+
+        </div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+        </div> 
+
+
+</div>
+
+
+
+           </div>
+
+
+          </div>
+
+
+
+    </div>
+
+    <div class="modal fade" id="modalMesasSelect" tabindex="-1" role="dialog" aria-labelledby="smallmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="smallmodalLabel">Mesas</h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                        <select id="MesasSelect" class="form-control"> 
+                                
+                        </select>
+                        <br>
+                           <h6>tipo de Mesa</h6>
+                            <select id="tipoMesas" class="form-control" >
+                                <option value="redonda" >redonda</option>
+                                <option value="cuadrada" >Cuadrada</option>
+                                <option value="rectangular" >rectangular</option>
+                            </select>
+                 
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button id="btnAgregarConfMesa"  type="button" class="btn btn-primary">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/moment.js" >  </script>
+   
+    <!-- Bootstrap JS-->
+
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+
+  
+  <!--  <script src="vendor/SyncFusion/jsrender.min.js"></script>
+    <script src="vendor/SyncFusion/ej.web.all.min.js"></script>  -->
+ 
+
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+
+    var db = firebase.database();
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+
+function CargarSecciones() {
+
+
+    
+    $.ajax({
+        type: "get",
+        url: "https://suritag.com/WebServiceSuritag/public/ListaPisos",
+        data: {idSitio:getParameterByName("sitio")},
+        dataType: "json",
+        beforeSend:function (xhr) {
+         //   $("#loadinGuardarPlanta").show();      
+        }
+    }).done(function (data) {
+     //   $("#loadinGuardarPlanta").hide(); 
+$("#ListaIndicator").empty();
+
+ if(data.value == [] || data.value == null ){
+
+ }else{
+var count = 0 ;
+data.value.forEach(element => {
+    count = count +1;
+    var content = `
+    <tr>
+        <th>`+count+`</th>
+        <th>`+element.Nombre+`</th>
+        <th><button class='btn boton btn-warning' id="btnDesabilitar`+count+`" value="`+element.idPiso+`" >Desabilitar<button></th>
+    </tr>
+    
+    `;
+    $("#ListaIndicator").append(content);
+
+  $("#space").append("<option value='"+element.idPiso+"' >"+element.Nombre+"</option>");
+
+
+    content = "<option value='"+element.idPiso+"'>"+element.Nombre+"</option>";
+    $("#selectiDiv").append(content);
+
+$("#btnDesabilitar"+count).click(function (evt) {
+    
+  var id =   $(this).val();
+
+$.ajax({
+    type: "post",
+    url: "https://suritag.com/WebServiceSuritag/public/DesabilitarPiso",
+    data: {idPiso:id},
+    dataType: "json",
+   
+}).done(function (data) { 
+    CargarSecciones();
+    alert("Desabilitado");
+
+ }).fail(function (error) {
+alert("Error al desabilitar ");
+
+  });
+
+
+
+});
+
+
+    
+});
+
+ }
+
+
+
+      }).fail(function (error) {
+      //  $("#loadinGuardarPlanta").hide(); 
+//alert("error");
+
+      });    
+
+};
+
+function CargarMesas() {
+$.ajax({
+    url:"https://suritag.com/WebServiceSuritag/public/MesasBySitio",
+    type:"get",
+    dataType:"json",
+    data:{idSitio:getParameterByName("sitio")},
+}).done(function (data) { 
+
+if(data.value == [] || data.value == null){
+
+
+}else{
+    data.value.forEach(element => {
+        
+var content = `
+<tr>
+        <th>`+element.NombreMesa+`</th>
+        <th>`+element.ValorPorPersonaMesa+`</th>
+        <th>`+element.PorcentajeAdelantoMesa+`</th>
+        <th><button id='desabilitar`+element.idMesas+`' value="`+element.idMesas+`" ><i  style='color:red'  class="fas fa-trash-alt"></i></button></th>
+
+    </tr>
+
+`;
+$("#bodytableMesas").append(content);
+
+$("#desabilitar"+element.idMesas).click(function (evt) { 
+
+
+ });
+
+    });
+
+}
+
+
+
+ }).fail(function (error) {
+//alert("Error");
+  });
+
+
+    
+};
+function GuardarMesas() {
+var param = {
+    NombreMesa: $("#identificador").val(),
+    ValorPersona:$("#valorPorPersona").val(),
+    EstadoMesa:1,
+    PorcentajeAdelanto:$("#PorcentajeAdelantado").val(),
+    maxPersonas : $("#MaxPersonas").val(),       
+    idSitio:getParameterByName("sitio"),
+    idPiso: $("#selectiDiv").val()
+
+};
+
+$.ajax({
+    type: "post",
+    url: "https://suritag.com/WebServiceSuritag/public/RegistrarMesas",
+    data: param,
+    dataType: "json",
+    beforeSend:function(xhr){
+        $("#loadingMesas").show();
+
+    }
+}).done(function (data) { 
+    CargarMesas();
+    $("#loadingMesas").hide();
+alert("Guardado Satisfactorio");
+ }).fail(function (error) {
+    $("#loadingMesas").hide();
+     alert("Error al Guardar la mesa");
+
+  });
+
+  }
+
+
+
+var mesaSelected = {
+    el:"",
+    id:""
+}
+
+
+        $(function () {
+   $("#loadingMesas").hide();
+           $("#loadinGuardarPlanta").hide(); 
+CargarSecciones();
+CargarMesas();
+
+$("#btnGuardarPlanta").click(function(evt) {
+    var nombreP = $("#nombrePlantaSitio").val();
+
+$.ajax({
+    type: "post",
+    url: "https://suritag.com/WebServiceSuritag/public/RegistrarPiso",
+    data: {nombrePiso:nombreP,idSitio:getParameterByName("sitio")},
+    dataType: "json",
+    beforeSend:function (xhr) {
+             $("#loadinGuardarPlanta").show(); 
+      }
+}).done(function (data) {
+    $("#loadinGuardarPlanta").hide(); 
+    CargarSecciones();
+    alert("Agregado Correctamente");
+
+  }).fail(function (error) {
+    $("#loadinGuardarPlanta").hide(); 
+alert("Error al Realizar la accion");
+  });
+
+
+
+
+
+});
+
+
+
+
+$("#btnGuardarMesas").click(function (evt) {
+
+GuardarMesas();
+
+  });
+
+  $("#nombreSitio").text( getParameterByName("name") );
+
+//Chagen Space of Site content 
+$("#space").change(function (evt) {
+
+if($(this).val() == "-1"){
+
+}else{
+LoadConfigMesas( $(this).val() );
+}
+
+
+  });
+CreateActionsTable();
+
+        }); //Fin Jquery 
+
+
+function LoadConfigMesas(idSpace) {
+
+
+//**Cargar La Configuracion de Fireabase Para las Mesas
+var idSitio = getParameterByName("sitio");
+
+db.ref("Sitios/"+idSitio+"/Config/Plantel/"+idSpace+"/Grafic").on("child_added",function (snapshot) {
+
+
+    var json =  snapshot.val();
+   
+
+switch (json.TIPOOBJETO) {
+    case "mesaredonda":
+
+    $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/coffee-table.png"  width="52" height="52" >`);
+        
+        break;
+
+        case "mesacuadrada":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/table.png"  width="52" height="52" > `);
+       
+        
+        break;
+
+        case "pared":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/brickwall.png"  width="52" height="52"  >`);
+        
+        break;
+
+        case "puerta":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/doors.png"  width="52" height="52"  >`);
+      
+        
+        break;
+        case "recepcion":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/reception.png"  width="52" height="52"  >`);
+      
+        break;
+
+    default:
+        break;
+}
+
+
+
+
+
+
+
+
+ });
+
+
+  $.ajax({
+      type: "post",
+      url: "https://suritag.com/WebServiceSuritag/public/MesasByPiso",
+      data: {idPiso:idSpace},
+      dataType: "json",
+      beforeSend:function(){
+
+      }
+  }).done(function (data) {
+      console.log(data);
+
+      if(data.value.length == 0  || data.value == []){
+
+      }else{
+    
+     $("#listMesasConfigT").empty();
+     $("#MesasSelect").empty();
+          data.value.forEach(element => {
+              $("#listMesasConfigT").append(" <li id='mesaItem"+element.idMesas+"' value='"+element.idMesas+"' class='list-group-item list-mesas-group '><h5>"+element.NombreMesa+"</h5></li>"); 
+               $("#MesasSelect").append("<option value='"+element.idMesas+"' >"+element.NombreMesa+"  </option>");
+         
+    
+               $(".list-mesas-group").click(function (evt) {
+    evt.preventDefault();
+
+
+$(".list-mesas-group").removeClass("selectedMesa");
+$(this).addClass("selectedMesa");
+
+
+
+mesaSelected.el = $(this).attr("id");
+mesaSelected.id = $(this).val();
+
+
+});
+
+
+
+         
+          });
+
+
+
+
+
+
+      }
+
+
+ }).fail(function (error) { 
+
+   }).always(function () {
+
+    });   
+
+
+
+ }
+
+
+//Configuracion Grafica de la Mesas Del Sitio
+function CreateActionsTable() {
+
+
+//Herramientas
+
+$(".herramienta").click(function (evt) { 
+
+
+var idEsapacionSitio = $("#space").val();
+var idTabla = $(this).attr("id");
+
+var idSitios = getParameterByName("sitio"); 
+
+
+if(idEsapacionSitio == "-1"){
+alert("Uste debe seleccionar Un Espacio para poder editarlo");
+
+
+}else{
+
+
+   $(".herramienta").removeClass("btn-primary"); 
+   $(this ).removeClass("btn-outline-primary"); 
+   $(this).addClass("btn-primary");
+ var tipoObject =  $(this).val();
+
+/*
+db.ref("Sitios/"+idSitios+"/Config/Plantel/"+idEsapacionSitio+"/Grafic/"+idMesa).set({
+    Mesa:idMesa,
+    Sitio:idSitios,
+    TipoMesa:tipoMesas,
+    RowIdentificador:idTabla,
+    Espacio:idEsapacionSitio
+});  */
+
+$(".table-mesa-space").click(function (evt) { 
+evt.preventDefault();
+
+ var  idtableRow = $(this).attr("id");
+
+ var json = {
+     SITIO:idSitios,
+     TIPOOBJETO:tipoObject,
+     IDPLANTA:idEsapacionSitio,
+     IDROW:idtableRow,
+     databaseId:null
+ }
+
+
+
+
+
+switch (json.TIPOOBJETO) {
+    case "mesaredonda":
+ if(mesaSelected.id == null || mesaSelected.id ==""){
+     alert("Usted debe seleccionar una Mesa de la lista");
+ }else{
+     json.databaseId = mesaSelected.id;
+    db.ref("Sitios/"+idSitios+"/Config/Plantel/"+idEsapacionSitio+"/Grafic/"+idtableRow).set(json); 
+
+ $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/coffee-table.png"  width="52" height="52" >`);
+   
+
+ }
+
+
+        
+        break;
+
+        case "mesacuadrada":
+      
+       
+    if(mesaSelected.id == null || mesaSelected.id ==""){
+     alert("Usted debe seleccionar una Mesa de la lista");
+ }else{
+     json.databaseId = mesaSelected.id;
+    db.ref("Sitios/"+idSitios+"/Config/Plantel/"+idEsapacionSitio+"/Grafic/"+idtableRow).set(json,function(error){
+ if(error){
+
+ }else{
+     
+$("#"+mesaSelected.el).remove();
+
+
+ }
+
+    }); 
+
+   $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/table.png"  width="52" height="52" > `);
+
+ }
+
+
+
+        
+        break;
+
+        case "pared":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img src="images/brickwall.png"  width="52" height="52"  >`);
+        
+        break;
+
+        case "puerta":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/doors.png"  width="52" height="52"  >`);
+      
+        
+        break;
+        case "recepcion":
+        $("#"+json.IDROW).empty();
+    $("#"+json.IDROW).append(`<img  src="images/reception.png"  width="52" height="52"  >`);
+      
+        break;
+
+    default:
+        break;
+}
+
+
+
+
+ });
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+ });
+
+
+//herramienta  fin
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->

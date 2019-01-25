@@ -1,0 +1,924 @@
+<div class="row" >
+
+
+
+
+<div class="col-sm-12 col-md-12"  id="divTablaRestaurantesLista"   >
+
+        <fieldset class="card" style="padding-top: 16px;padding-bottom: 16px;display: inline;width:100%;padding-left: 5px" >
+                <button class="btn btn-outline-success" id="agregarReservasSitio"  ><i class="fas fa-plus-circle"></i> Agregar</button>
+                <button class="btn btn-outline-success" id="modificarSitio"  ><i class="fas fa-edit"></i>  Modificar</button>
+                <button class="btn btn-outline-success" id="HistorialReservasSitio"  > <i class="fas fa-history"></i> Historial de Reservas </button>
+                <button class="btn btn-outline-success" id="actividadesSitios"  ><i class="fas fa-chart-line"></i> Actividades</button>
+                <button class="btn btn-outline-warning" id="btnMesasConfigSitio" ><i class="fas fa-cog"></i> Configurar mesas</button>
+                
+                
+                    </fieldset>
+
+
+<table  class="table table-borderless table-striped table-earning">
+
+<thead>
+
+    <tr>
+        <th></th>
+        <th>Nombre</th>
+        <th>Direccion</th>
+        <th>telefono</th>
+        <th>Propietario</th>
+        <th>Categoria</th>
+        
+        
+         </tr>
+</thead>
+
+<tbody id="tablaRestaurantes" >
+
+
+</tbody>
+ 
+ 
+
+
+
+</table>
+
+
+</div>
+
+<div class="col-sm-12 col-md-12" id="divAgregarRestaurantes"  >
+
+<div class="row " >
+
+
+
+<div class="col-sm-7" >
+
+<fieldset style="margin-bottom: 10px"  class="card" >
+<h3>Encuentra tu restaurante</h3>
+
+</fieldset>
+
+    <input id="pac-input" style="height: 35px !important"  class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
+
+  </div>
+  <div class="row col-sm-5" >
+
+    <div class="card" style="width: 100% !important; height: 100% !important" >
+    
+    <div  class="card-header">
+      <h5>Datos basicos</h5>     
+    
+    </div>
+    <div  class="card-body">
+    
+    <form>
+    <fieldset class="e-borderbox">
+    
+      
+    
+      <div  class="form-group">
+        <label>Nombre del restaurante</label>
+        <input type="text" id="nombreResReg"  class="form-control">
+        </div>
+        <div  class="form-group">
+          <label>Direccion</label>
+          <input type="text" id="direccionResReg"  class="form-control">
+          </div>
+        
+          <div  class="form-group">
+            <label>Telefono</label>
+            <input type="text" id="telefonoRestReg"  class="form-control">
+         </div>
+          <div class="form-group" >
+        <h5>Seleccione una categoria Para el Sitio</h5>
+           
+         <select  id="categoriaResReg" class="form-control" >
+    <option value="-1" ></option>
+
+         </select>
+ </div>
+
+  <div class="form-control" >
+<h4 style="color: red" >Seleccione el Propietario(Admin)</h4>
+
+<select  class="form-control" id="PropietarioRestSelect">
+
+
+
+</select>
+
+  </div>
+
+    <br>
+    
+    </fieldset>
+    
+       <div style="float: right;display: inline">
+        <button class="btn btn-warning" type="reset"  id="btnCancelarRegRest"  >Cancelar</button>
+        <button class="btn btn-success" type="button" id="btnGuardarRes"  ><i id="btnLoadGuardarRes"  class="fas fa-spinner fa-pulse"></i>  Guardar</button>
+
+       </div>
+    
+    
+        
+    
+    
+    
+    </form>
+    
+    
+    
+    
+    <form>
+    
+    
+    
+    
+    </form>
+    
+    </div>
+    <div  class="card-footer">
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    </div>
+
+<!--
+  
+  <div class="card" >
+  <div  class="card-header">
+<p>Restaurantes</p>
+
+  </div>
+  <div  class="card-body">
+
+     
+
+
+
+  </div>
+
+
+
+
+  </div>  -->
+
+
+
+
+</div>
+
+
+  
+
+
+    </div>
+
+<div class="col-sm-12 col-md-12" id="divConfigurarMesasRest" >
+
+<div class="row" >
+
+ <div class="col-sm-12">
+
+<h3  id="titleRes" class="e-titleText" ></h3>
+
+ </div> 
+
+<div  class="col-sm-7">
+
+<table class="table table-borderless table-striped table-earning" >
+
+<thead  class="thead-light" >
+<tr>
+
+<th>Nombre</th>
+<th>Valor</th>
+<th>Porcentaje R.</th>
+<th></th>
+
+
+
+</tr>
+
+</thead>
+<tbody id="bodyMesas" >
+
+
+</tbody>
+
+
+
+</table>
+
+
+</div>
+
+<div class="col-sm-5" >
+
+
+
+
+
+  
+
+
+
+
+<div class="card" style="padding: 15px" > 
+
+<div class="card-header">
+<h3>Mesas</h3>
+
+</div>
+<div class="card-body"  >
+
+</div>
+<form>
+
+<div class="form-group">
+<label>Nombre</label>
+<input type="text"  id="NombreMesaRegi"  class="form-control" >
+
+</div>
+
+<div class="form-group">
+    <label>Valor por Persona (Opcional)</label>
+    <input type="number" id="valorPeronasInMesaOpReg"  class="form-control" >
+    
+</div>
+
+ 
+      <div class="form-group">
+            <label>Porcentaje de adelanto </label>
+            <input type="number"  id="PorcentajeAdReg"  class="form-control" >
+       </div>
+    
+<div style="float: right" >
+  <button class=" btn btn-outline-danger" id="btnRegresarRegistroMesa" type="button" >Regresar</button>
+  <button class="btn btn-warning" type="reset">Limpiar datos</button>
+<button class="btn btn-success" id="GuardarMesa" type="button"  >  <i id="loadingFormMesas" class="fas fa-spinner fa-spin"></i>  Guardar</button>
+
+
+</div>
+
+
+
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+var placeDataMap = [];
+
+$(function () { 
+
+var SitioSelecdted = 0;
+
+
+
+
+
+function GuardarMesa() { 
+
+var params= {
+  NombreMesa:$("#NombreMesaRegi").val(),
+  ValorPersona:$("#valorPeronasInMesaOpReg").val(),
+ PorcentajeAdelanto:$("#PorcentajeAdReg").val(),
+ idSitio:SitioSelecdted
+
+};
+
+console.log(params);
+
+$.ajax({
+  url:"http://localhost/WebServiceSuritag/public/RegistrarMesas",
+  type:"post",
+  data:params,
+  dataType:"json",
+  beforeSend:function(xhr){
+    $("#loadingFormMesas").show();
+  }
+}).done(function (data) { 
+  $("#loadingFormMesas").hide();
+  LoadMesasSitio(SitioSelecdted);
+
+
+ }).fail(function (error) { 
+  $("#loadingFormMesas").hide();
+alert("Error al Guardar los datos");
+
+ });
+
+
+
+ }
+
+
+function GetSelectedRes() {
+
+var id = $('input:radio[name=selectRest]:checked').val();
+
+if(id == undefined || id == null || id==""){
+
+alert("Debe seleccionar un restaurante");
+return null;
+
+}else{
+
+return id;
+}
+
+  }
+
+
+
+function showListRestaurants() {
+ $("#divTablaRestaurantesLista").show();
+ $("#divAgregarRestaurantes").hide();
+ $("#divConfigurarMesasRest").hide();
+ LoadRestaurant();
+
+
+  }
+  function ShowRregistryRestaurants() {
+    $("#divTablaRestaurantesLista").hide();
+ $("#divAgregarRestaurantes").show();
+ $("#divConfigurarMesasRest").hide();
+ $("#btnLoadGuardarRes").hide();
+
+    }
+
+   function ShowConfigMesas() { 
+    $("#divTablaRestaurantesLista").hide();
+ $("#divAgregarRestaurantes").hide();
+ $("#divConfigurarMesasRest").show();
+ //LoadMesasSitio();
+
+
+    }
+
+
+ function ConsultarStio(id) {
+ $.ajax({
+ url:"http://localhost/WebServiceSuritag/public/GetSitioById",
+ type:"post",
+ dataType:"json",
+ data:{"idSitio":id}
+
+
+
+ }).done(function (data) { 
+
+$("#titleRes").text(data.NombreSitio);
+
+
+
+
+
+  }).fail(function (error) {
+
+   });
+
+
+   }    
+
+
+function LoadMesasSitio(id) {
+$.ajax({
+ url:"http://localhost/WebServiceSuritag/public/MesasBySitio",
+ type:"post",
+ dataType:"json",
+ data:{"idSitio":id}
+
+}).done(function (data) { 
+
+$("#bodyMesas").empty();
+/*
+<th>Nombre</th>
+<th>Valor</th>
+<th>Porcentaje R.</th>
+
+<th></th>
+
+
+
+*/
+
+
+
+var count = data.count;
+
+if(count === 0  || data.value ==[] || data.value == undefined ){
+
+
+}else{
+  
+  data.value.forEach(element => {
+  var obj = "<tr class='hoverTab' >";
+  obj = obj +"<th>"+element.NombreMesa+"</th>";
+  obj = obj +"<th>"+element.ValorPorPersonaMesa+"</th>";
+  obj = obj +"<th>"+element.PorcentajeAdelantoMesa+"</th>";
+  obj = obj +"<th> <button class='btn btn-danger' id='idMesa+"+element.idMesas+"' >Eliminar</button> </th>";
+
+
+obj= obj +"</tr>";
+$("#bodyMesas").append(obj);
+
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+console.log("mesas");
+console.log(data);
+
+ }).fail(function (error) {
+
+
+  });
+
+
+
+
+
+
+  }
+
+
+
+
+
+$("#btnLoadGuardarRes").hide();
+function LoadCategoriaRes() {
+
+//categoriaResReg
+
+$.ajax({
+ url:"http://localhost/WebServiceSuritag/public/CategoriasAll",
+ type:"get",
+ dataType:"json"
+
+}).done(function (data) { 
+
+var valores = data.obj;
+console.log(valores);
+
+valores.forEach(element => {
+ // var target = "<option id='"+element.idCategorias+"' > "+element.NombreCategoria+" </option>";
+//$("#categoriaResReg").append(target);
+
+var obj = "<option value='"+element.idCategorias+"'>"+element.NombreCategoria+"</option>";
+  $("#categoriaResReg").append(obj);
+});
+
+
+
+ }).fail(function (error) {
+
+
+  });
+
+  
+  }
+
+
+
+
+
+$("#btnCancelarRegRest").click(function (evt) {
+  $("#btnLoadGuardarRes").hide();
+
+
+  });
+
+
+function GetClients() { 
+
+$.ajax({
+  url:"http://localhost/WebServiceSuritag/public/getClientes",
+type:"get",
+dataType:"json"
+
+
+}).done(function (data) {
+
+var datos = data.value;
+$("#PropietarioRestSelect").empty();
+datos.forEach(element => {
+  var obj = "<option  value='"+element.idUsuario+"'>"+element.NombreUsuario+"</option>";
+  $("#PropietarioRestSelect").append(obj);
+
+});
+
+  }).fail(function (error) {
+
+  });
+
+
+ }
+
+function LoadRestaurant() { 
+
+$.ajax({
+    url:"http://localhost/WebServiceSuritag/public/GetAllSitiosF",
+    type:"get",
+    dataType:"json",
+    beforeSend:function (xhr) {
+
+$("#btnLoadGuardarRes").show();
+
+      }
+
+}).done(function (data) {
+
+   console.log(data);
+  $("#tablaRestaurantes").empty();
+
+ //tablaRestaurantes
+
+data.obj.forEach(element => {
+    
+var  target = "<tr class='hoverTab' >";
+target = target +"<th><input type='radio' name='selectRest' value='"+element.idSitos+"' ></th>";
+target = target +"<th><p>"+element.NombreSitio+"</p></th>";
+target = target +"<th><p>"+element.direccionSitio+"</p></th>";
+target = target +"<th><p>"+element.Telefono+"</p></th>";
+target = target +"<th><p>"+element.NombreUsuario+"</p></th>";
+target = target +"<th><p>"+element.NombreCategoria+"</p></th>";
+
+target = target +"</tr>";
+
+
+$("#tablaRestaurantes").append(target);
+
+});
+ 
+
+
+
+
+
+  }).fail(function (error) {
+
+
+
+});
+
+
+
+ }
+
+
+
+
+
+
+
+function Init() {
+$("#loadingFormMesas").hide();
+
+
+showListRestaurants();
+
+LoadRestaurant();
+LoadCategoriaRes();
+
+
+$("#btnRegresarRegistroMesa").click(function (evt) {
+
+
+  showListRestaurants();
+  });
+
+
+$("#agregarReservasSitio").click(function () {
+  GetClients();
+ShowRregistryRestaurants();
+
+ });
+$("#btnCancelarRegRest").click(function () {
+showListRestaurants();
+
+  });
+
+
+  $("#GuardarMesa").click(function (evt) { 
+evt.preventDefault();
+
+GuardarMesa();
+
+   });
+
+ $("#btnMesasConfigSitio").click(function (evt) {  
+
+ var id =  GetSelectedRes();
+ 
+if(id == null){
+
+
+}else{
+  SitioSelecdted = id;
+  ConsultarStio(id);
+  LoadMesasSitio(id);
+
+  ShowConfigMesas();
+
+}
+
+ }); 
+
+
+
+  $("#btnGuardarRes").click(function (evt) {
+
+var cat = $("#categoriaResReg").val();
+
+console.log(cat);
+
+if( placeDataMap.length == 0  ){
+alert("Usted debe Buscar un lugar en el mapa");
+}else{
+
+
+
+if(cat == "-1" || cat == -1 ){
+
+alert("Usted debe seleccionar una categoria");
+
+
+}else{
+
+var countImagens = placeDataMap.photos.length;
+var img1 = "";
+var img2= "" ;
+if(countImagens  > 0){
+img1  = placeDataMap.photos[0].getUrl({
+  'maxWidth': 800, 'maxHeight': 600
+
+});
+}
+if(countImagens > 1) {
+  img2  = placeDataMap.photos[1].getUrl({
+  'maxWidth': 800, 'maxHeight': 600
+
+});
+
+  }
+
+console.log(img1);
+console.log(img2);
+
+
+var param = {
+  Identificador: placeDataMap.id,
+  Latitud: placeDataMap.geometry.location.lat(),
+  Longitud:placeDataMap.geometry.location.lng(),
+  direccionSitio: $("#direccionResReg").val() ,
+  imagenPrimaria:img1,
+  imagenSecundaria:img2,
+  idUsuario:$("#PropietarioRestSelect").val(),
+  idCategoria: $("#categoriaResReg").val() ,
+  NombreSitio:$("#nombreResReg").val(),
+  TelefonoSitio:$("#telefonoRestReg").val(),
+
+
+}
+
+
+//console.log(param);
+
+$.ajax({
+url:"http://localhost/WebServiceSuritag/public/RegistrarSitioF",
+type:"post",
+dataType:"json",
+data:param,
+beforeSend:function (xhr) {
+$("#btnLoadGuardarRes").show();
+
+}
+
+}).done(function (data) {
+  $("#btnLoadGuardarRes").hide();
+  showListRestaurants();
+
+
+  }).fail(function (error) {
+    $("#btnLoadGuardarRes").hide();
+
+
+  });
+
+
+
+
+}
+
+
+}
+    });
+
+
+
+
+
+  }  //fin Init
+
+
+
+
+
+//Ejecusion de Codigo
+
+Init();
+
+
+
+
+
+
+
+ });
+
+
+
+
+//Google Maps 
+
+
+ function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13,
+          mapTypeId: 'roadmap',
+          disableDefaultUI: true,
+          zoomControl: true,
+        });
+
+
+
+
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+
+   if(navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(function (position) {
+ var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+ map.setCenter(pos);
+
+    });
+   
+
+   }
+
+
+
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+            console.log(place);
+
+             placeDataMap = place;
+        //Mostrar Datos al Usuario
+        $("#nombreResReg").val(placeDataMap.name);
+        $("#direccionResReg").val(placeDataMap.formatted_address);
+        $("#telefonoRestReg").val(placeDataMap.formatted_phone_number);
+         
+
+        //    
+        
+
+
+
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+
+
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Bg2YOsO6fxAn5a7rNq9lMb723gEgLK0&libraries=places&callback=initAutocomplete"
+         async defer></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
